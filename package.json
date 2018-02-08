@@ -1,0 +1,15 @@
+{
+  "name": "connect4-electron",
+  "version": "1.0.0",
+  "description": "A connect four game for electron!",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "Ben Pearce",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.8.2",
+    "pixi.js": "^4.7.0"
+  }
+}
