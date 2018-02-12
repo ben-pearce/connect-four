@@ -1,42 +1,64 @@
+import { ipcRenderer } from "electron";
+import * as PIXI from "pixi.js";
+
 class FourFace {
 
     public app: PIXI.Application;
     public loader: PIXI.loaders.Loader;
 
+    private boardSprite: PIXI.Sprite;
+
     public constructor() {
-        require("pixi.js");
         this.app = new PIXI.Application({
             height: 400, transparent: true,
-            width: 500,
+            width: 450,
         });
         this.loader = new PIXI.loaders.Loader();
 
         this.loader.add("board", "images/board.png")
             .add("chipBlue", "images/chip-blue.png")
             .add("chipRed", "images/chip-red.png")
-            .load((loader, resources) => {
+            .load((loader: PIXI.loaders.Loader, resources: PIXI.loaders.ResourceDictionary) => {
                 this.assetsLoaded(loader, resources);
             });
 
-        consoleLog()(this.app);
+        ipcRenderer.send("log", this.app.renderer.height);
     }
 
-    public assetsLoaded(loader, resources) {
+    public assetsLoaded(loader: PIXI.loaders.Loader, resources: PIXI.loaders.ResourceDictionary) {
         consoleLog()("assets loaded!");
 
-        const boardSprite: PIXI.Sprite = new PIXI.Sprite(resources.board.texture);
+        this.boardSprite = new PIXI.Sprite(resources.board.texture);
 
-        boardSprite.y = 30;
-        this.app.stage.addChild(boardSprite);
+        this.boardSprite.anchor.x = 0.5;
+        this.boardSprite.y = 30;
+        this.boardSprite.x = this.app.renderer.width / 2;
+        this.boardSprite.scale.x = 0.7;
+        this.boardSprite.scale.y = 0.7;
+        this.app.stage.addChild(this.boardSprite);
 
-        const column: PIXI.Graphics = new PIXI.Graphics();
-        column.lineStyle(4, 0xFF3300, 1);
-        column.beginFill(0x66CCFF);
-        column.drawRect(0, 0, 64, 64);
-        column.endFill();
-        column.x = 170;
-        column.y = 170;
-        this.app.stage.addChild(column);
+        this.createColumns();
+    }
+
+    public createColumns(at: number = 60) {
+        for (let i: number = 0; i < 7; i++) {
+            const column: PIXI.Graphics = new PIXI.Graphics();
+            column.lineStyle(1, 0x000000, 1);
+            column.beginFill(0x000000);
+            column.drawRect(0, 0, 45, this.boardSprite.height);
+            column.endFill();
+            column.interactive = true;
+            column.alpha = 0;
+            column.y = this.boardSprite.y;
+            column.x = 60 + (i * column.width) + ((i === 0) ? 0 : 1);
+            column.on("mouseover", () => {
+                column.alpha = 0.5;
+            });
+            column.on("mouseout", () => {
+                column.alpha = 0;
+            });
+            this.app.stage.addChild(column);
+        }
     }
 }
 

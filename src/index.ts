@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, ipcMain } from "electron";
 import * as path from "path";
 import * as url from "url";
 
@@ -10,10 +10,10 @@ function createWindow() {
         width: 500,
     });
 
-    win.setMenu(null);
+    // win.setMenu(null);
 
     win.loadURL(url.format({
-        pathname: path.join(__dirname, "index.html"),
+        pathname: path.join(__dirname, "../dist/index.html"),
         protocol: "file:",
         slashes: true,
     }));
@@ -36,3 +36,11 @@ app.on("activate", () => {
         createWindow();
     }
 });
+
+ipcMain.on("log", (event: object, arg: string) => {
+    log()(arg);
+});
+
+function log() {
+    return console.log;
+}

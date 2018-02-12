@@ -3,3 +3,9 @@ body, html {
     padding: 0;
     background: #004FA3;
 }
+
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+}
