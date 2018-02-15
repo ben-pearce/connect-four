@@ -1,6 +1,22 @@
 import { ipcRenderer } from "electron";
 import * as PIXI from "pixi.js";
 
+class FindFour {
+
+    public board: Array<Array<number>>;
+    public columns: number;
+    public rows: number;
+
+    public constructor(columns: number, rows:number) {
+        for(var column: number = 0; column <= columns; columns++) {
+            this.board.push([]);
+            for(var row: number = 0; row <= rows; rows++) {
+                this.board[column].push(0);
+            }
+        }
+    }
+}
+
 class FourFace {
 
     public app: PIXI.Application;
