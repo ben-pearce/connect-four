@@ -7,9 +7,33 @@ class FindFour {
     public board: number[][];
     public columns: number;
     public rows: number;
+    public currentPlayer: number;
 
-    public constructor() {
+    public constructor(rows: number, columns: number) {
+        this.rows = rows;
+        this.columns = columns;
+        this.currentPlayer = 1;
 
+        this.board = [];
+        for(let row: number = 0; row <= (this.rows - 1); row++) {
+            this.board.push([]);
+            for(let column: number = 0; column <= (this.columns - 1); column++) {
+                this.board[row].push(0);
+            }
+        }
+    }
+
+    public placeChip(row: number, column: number) {
+        this.board[row][column] = 1;
+        this.currentPlayer = (this.currentPlayer == 1) ? 2 : 1;
+    }
+
+    public getEmptyRow(column: number): number {
+        for(let row: number = 0; row <= (this.rows - 1); row++) {
+            if(this.board[row][column] == 0) {
+                return row;
+            }
+        }
     }
 }
 
@@ -17,6 +41,7 @@ class FourFace {
 
     public app: PIXI.Application;
     public loader: PIXI.loaders.Loader;
+    public chipPlacedCallback: (column: number) => void;
 
     private boardSprite: PIXI.Sprite;
     private activeChip: PIXI.Sprite;
@@ -91,17 +116,19 @@ class FourFace {
         return activeChip;
     }
 
-    public placeActiveChip() {
+    public placeActiveChip(row: number, chipId: number = 0) {
         this.activeChip.parentGroup = this.slotGroup;
         this.activeChip.width = 50;
         this.activeChip.height = 50;
-        let slotY: number = ((this.boardSprite.height / 6) * 1.4) + (((this.boardSprite.height / 6) * 0.95) * 5);
+        let slotY: number = ((this.boardSprite.height / 6) * 1.4) + (((this.boardSprite.height / 6) * 0.95) * row);
+
+        let chips: PIXI.Texture[] = [this.resources.chipBlue.texture, this.resources.chipRed.texture]
 
         new TWEEN.Tween(this.activeChip)
             .to({ y: slotY }, 1000)
             .easing(TWEEN.Easing.Bounce.Out)
             .onComplete(() => {
-                this.activeChip = this.createNewChip(this.resources.chipRed.texture);
+                this.activeChip = this.createNewChip(chips[chipId]);
                 this.app.stage.addChild(this.activeChip);
             })
             .start();
@@ -139,7 +166,7 @@ class FourFace {
             column.x = boardEdge + 10 + (63 * i);
 
             column.on("mouseover", () => { this.moveActiveChip(column) });
-            column.on("mouseup", () => { this.placeActiveChip() });
+            column.on("mouseup", () => { this.chipPlacedCallback(i) });
 
             this.app.stage.addChild(column);
         }
@@ -147,6 +174,13 @@ class FourFace {
 }
 
 window.onload = () => {
+    const findFour: FindFour = new FindFour(6, 7);
     const fourFace: FourFace = new FourFace();
+    fourFace.chipPlacedCallback = (column: number) => {
+        let emptyRow: number = findFour.getEmptyRow(column);
+        ipcRenderer.send("log", emptyRow);
+        findFour.placeChip(emptyRow, column);
+        fourFace.placeActiveChip(5 - emptyRow, findFour.currentPlayer - 1);
+    };
     document.body.appendChild(fourFace.app.view);
 };
