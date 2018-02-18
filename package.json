@@ -9,11 +9,15 @@
   "author": "Ben Pearce",
   "license": "MIT",
   "dependencies": {
+    "@tweenjs/tween.js": "^17.2.0",
     "electron": "^1.8.2",
+    "pixi-display": "^1.1.1",
+    "pixi-layers": "^0.1.4",
     "pixi.js": "^4.7.0"
   },
   "devDependencies": {
-    "@types/pixi.js": "^4.7.0",
+    "@types/pixi.js": "^4.7.1",
+    "@types/tween.js": "^16.9.0",
     "ts-loader": "^3.5.0",
     "typescript": "^2.7.1",
     "webpack": "^3.11.0"
