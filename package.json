@@ -19,7 +19,7 @@
     "@types/pixi.js": "^4.7.1",
     "@types/tween.js": "^16.9.0",
     "ts-loader": "^3.5.0",
-    "typescript": "^2.7.1",
+    "typescript": "^2.7.2",
     "webpack": "^3.11.0"
   }
 }
