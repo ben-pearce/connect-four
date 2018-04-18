@@ -7,10 +7,10 @@ let win: BrowserWindow;
 function createWindow() {
     win = new BrowserWindow({
         height: 700, resizable: false,
-        width: 504,
+        width: 500,
     });
 
-    //win.setMenu(null);
+    // win.setMenu(null);
 
     win.loadURL(url.format({
         pathname: path.join(__dirname, "../dist/index.html"),
