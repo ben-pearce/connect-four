@@ -31,16 +31,10 @@ export class MiniMax {
                         beta = nextScore;
                     }
                 }
-
-                if (alpha >= beta) {
-                    ipcRenderer.send("log", "alpha: " + alpha + " beta: " + beta + " score: " + bestScore);
-                    return [bestColumn, bestScore];
-                }
             }
         }
 
-        return [bestColumn, bestScore];
-    }
+        return [bestColumn, bestScore];    }
 
     private static WinningScore: number = 100000;
     private static BestScore: number = 99999;

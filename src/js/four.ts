@@ -20,7 +20,7 @@ window.onload = () => {
 
     fourFace.chipLandedCallback = () => {
         if (findFour.board.player === 2) {
-            const [nextColumn, nextScore] = MiniMax.nextMove(findFour.board, 8);
+            const [nextColumn, nextScore] = MiniMax.nextMove(findFour.board, 6);
             const columnMovie = fourFace.getColumn(nextColumn);
             fourFace.moveActiveChip(columnMovie);
             findFour.board.place(nextColumn);

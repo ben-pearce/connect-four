@@ -4,6 +4,7 @@ import * as PIXI from "pixi.js";
 import "pixi-layers";
 
 import { ipcRenderer } from "electron";
+import { TextStyle } from "pixi.js";
 
 export class FourFace {
 
@@ -47,6 +48,36 @@ export class FourFace {
         this.slotGroup = new PIXI.display.Group(0, false);
         this.boardGroup = new PIXI.display.Group(1, false);
         this.activeGroup = new PIXI.display.Group(2, false);
+
+        const textStyle: PIXI.TextStyle = new PIXI.TextStyle({
+            align: "center",
+            fill: 0xFFFFFF,
+            fontFamily: "Arial",
+            fontSize: 50,
+            fontWeight: "bold",
+            stroke: 0x000000,
+            strokeThickness: 5,
+        });
+
+        const playerOneNickname: PIXI.Text = new PIXI.Text("Player 1", textStyle);
+        const playerTwoNickname: PIXI.Text = new PIXI.Text("Computer", new PIXI.TextStyle(textStyle));
+        playerOneNickname.x = 100;
+        playerOneNickname.y = 460;
+        playerTwoNickname.x = playerOneNickname.x;
+        playerTwoNickname.y = playerOneNickname.y + playerOneNickname.height + 10;
+
+        const playerOneHighlight: PIXI.Graphics = new PIXI.Graphics();
+        playerOneHighlight.lineStyle(0, 0, 1);
+        playerOneHighlight.beginFill(0x000000, 0.25);
+        playerOneHighlight.drawRoundedRect(playerOneNickname.x, playerOneNickname.y,
+                playerOneNickname.width, playerOneNickname.height, 10);
+        playerOneHighlight.endFill();
+
+        this.app.stage.addChild(playerOneHighlight);
+        this.app.stage.addChild(playerOneNickname);
+        this.app.stage.addChild(playerTwoNickname);
+
+        playerTwoNickname.style.stroke = 0x636363;
 
         this.app.stage.addChild(new PIXI.display.Layer(this.slotGroup));
         this.app.stage.addChild(new PIXI.display.Layer(this.boardGroup));
