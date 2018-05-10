@@ -14,7 +14,7 @@ window.onload = () => {
         fourFace.placeActiveChip(row, findFour.board.player - 1);
 
         if (findFour.checkWinPosition(row, column)) {
-            fourFace.showWinningChips(findFour.winningSlots);
+            ipcRenderer.send("log", "Human won!");
         }
     };
 
@@ -28,9 +28,10 @@ window.onload = () => {
             fourFace.placeActiveChip(nextRow, findFour.board.player - 1);
 
             if (findFour.checkWinPosition(nextRow, nextColumn)) {
-                fourFace.showWinningChips(findFour.winningSlots);
+                ipcRenderer.send("log", "Computer won!");
             }
         }
+        ipcRenderer.send("log", MiniMax.getBoardScore(findFour.board));
     };
 
     document.body.appendChild(fourFace.app.view);

@@ -4,8 +4,7 @@ import { ipcRenderer } from "electron";
 
 export class MiniMax {
 
-    public static nextMove(board: Board, depth: number = 4, alpha: number = null,
-                           beta: number = null, max: boolean = true): number[] {
+    public static nextMove(board: Board, depth: number = 4, max: boolean = true): number[] {
         const score: number = MiniMax.getBoardScore(board);
 
         if (depth === 0 || Math.abs(score) === MiniMax.WinningScore || board.full()) {
@@ -19,37 +18,27 @@ export class MiniMax {
             const newBoard: Board = board.copy();
 
             if (newBoard.place(column)) {
-                const [nextColumn, nextScore] = MiniMax.nextMove(newBoard, depth - 1, alpha, beta, !max);
-
+                const [nextColumn, nextScore] = MiniMax.nextMove(newBoard, depth - 1, !max);
                 if (bestColumn === null || (max && nextScore > bestScore) || (!max && nextScore < bestScore)) {
                     bestColumn = column;
                     bestScore = nextScore;
-
-                    if (max) {
-                        alpha = nextScore;
-                    } else {
-                        beta = nextScore;
-                    }
                 }
             }
         }
 
         return [bestColumn, bestScore];    }
 
-    private static WinningScore: number = 100000;
-    private static BestScore: number = 99999;
-
-    private static getBoardScore(board: Board) {
+    public static getBoardScore(board: Board) {
         let points: number = 0;
 
         const deltaOffsets: Array<[number, number, number, number, number]> = [
-            [0, -3, 0, 1, 0], [0, 0, -3, 0, 1],
-            [0, -3, -3, 1, 1], [3, 0, -3, -1, 1]];
+            [0, 3, 6, -1,  0],  [0, 0, 3,  0, 1],
+            [3, 3, 6, -1, -1],  [0, 3, 3, -1, 1]];
 
         for (const delta of deltaOffsets) {
-            const [initial, offsetX, offsetY, deltaX, deltaY] = delta;
-            for (let row: number = initial; row < board.rows + offsetX; row++) {
-                for (let column: number = 0; column < board.columns + offsetY; column++) {
+            const [initialColumn, rowMin, columnMax, deltaX, deltaY] = delta;
+            for (let row: number = board.rows - 1; row >= rowMin; row--) {
+                for (let column: number = initialColumn; column <= columnMax; column++) {
                     const score: number = MiniMax.scorePosition(board, row, column, deltaX, deltaY);
                     if (Math.abs(score) === MiniMax.WinningScore) {
                         return score;
@@ -61,6 +50,9 @@ export class MiniMax {
 
         return points;
     }
+
+    private static WinningScore: number = 100000;
+    private static BestScore: number = 99999;
 
     private static scorePosition(board: Board, row: number, column: number, deltaX: number, deltaY: number): number {
         let humanPoints: number = 0;

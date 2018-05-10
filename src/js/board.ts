@@ -27,6 +27,10 @@ export class Board {
         return false;
     }
 
+    public print() {
+        ipcRenderer.send("log", this.board);
+    }
+
     public get(row: number, column: number): number {
         if (row >= 0 && row < this.rows && column >= 0 && column < this.columns) {
             return this.board[row][column];
@@ -47,11 +51,9 @@ export class Board {
     }
 
     public full(): boolean {
-        for (const row of this.board) {
-            for (const column of row) {
-                if (column === 0) {
-                    return false;
-                }
+        for (const column of this.board[this.rows - 1]) {
+            if (column === 0) {
+                return false;
             }
         }
 
