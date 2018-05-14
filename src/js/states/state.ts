@@ -73,6 +73,10 @@ export abstract class State {
         return layer;
     }
 
+    protected tidyDisplayName(name: string) {
+        return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    }
+
     protected createTextBox(x: number, y: number, width: number): HTMLInputElement {
         const input = document.createElement("input");
         input.type = "text";

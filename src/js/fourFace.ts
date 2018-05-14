@@ -10,14 +10,27 @@ import { MenuState } from "./states/menuState";
 import { State } from "./states/state";
 
 export class FourFace {
+    public static Multiplayer = 0;
+    public static Computer = 1;
+
+    public static Easy = 4;
+    public static Medium = 6;
+    public static Hard = 8;
+
+    public static rows: number = 6;
+    public static cols: number = 7;
+
     public app: PIXI.Application;
     public loader: PIXI.loaders.Loader;
     public chipPlacedCallback: (column: number) => void;
     public chipLandedCallback: () => void;
+    public resetCallback: () => void;
+
+    public gameMode: number = FourFace.Multiplayer;
+    public difficulty: number = FourFace.Easy;
 
     public logoSprite: PIXI.Sprite;
     public resources: PIXI.loaders.ResourceDictionary;
-    public chips: PIXI.Sprite[][] = [];
 
     public playerOneName: string;
     public playerTwoName: string;
@@ -25,21 +38,11 @@ export class FourFace {
     private states: { [id: string]: State } = {};
     private currentState: State;
 
-    private rows: number = 6;
-    private cols: number = 7;
-
     public constructor() {
         this.app = new PIXI.Application({
             antialias: true, height: 670,
             transparent: true, width: 500,
         });
-
-        for (let row: number = 0; row < this.rows; row++) {
-            this.chips.push([]);
-            for (let column: number = 0; column < this.cols; column++) {
-                this.chips[row].push(null);
-            }
-        }
 
         this.loader = new PIXI.loaders.Loader();
         this.app.stage = new PIXI.display.Stage();

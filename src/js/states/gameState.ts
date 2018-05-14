@@ -5,6 +5,7 @@ import "pixi-layers";
 import { FourFace } from "../fourFace";
 import { MenuState } from "./menuState";
 import { State } from "./state";
+import { ipcRenderer } from "electron";
 
 export class GameState extends State {
 
@@ -13,12 +14,27 @@ export class GameState extends State {
     private boardSprite: PIXI.Sprite;
     private activeChip: PIXI.Sprite;
     private columnsLocked: boolean = false;
-    private currentColumn: PIXI.Graphics;
+    private currentColumn: number;
     private currentHandPosition: number;
     private columns: PIXI.Graphics[] = [];
+    private chips: PIXI.Sprite[][] = [];
+
+    private playerOneHighlight: PIXI.Graphics;
+    private playerTwoHighlight: PIXI.Graphics;
+    private playerOneChip: PIXI.Sprite;
+    private playerTwoChip: PIXI.Sprite;
+
+    private gameOver: boolean = false;
 
     constructor(app: FourFace) {
         super(app);
+
+        for (let row: number = 0; row < FourFace.rows; row++) {
+            this.chips.push([]);
+            for (let column: number = 0; column < FourFace.cols; column++) {
+                this.chips[row].push(null);
+            }
+        }
     }
 
     public createNewChip(chipTexture: PIXI.Texture): PIXI.Sprite  {
@@ -32,37 +48,69 @@ export class GameState extends State {
         return activeChip;
     }
 
-    public placeActiveChip(row: number, chipId: number = 0) {
+    public placeActiveChip(row: number) {
         this.columnsLocked = true;
         this.activeChip.parentGroup = this.slotGroup;
         this.activeChip.width = 50;
         this.activeChip.height = 50;
-        const slotY: number = ((this.boardSprite.height / 6) * 1.4) +
-            (((this.boardSprite.height / 6) * 0.95) * (5 - row));
-
+        const slotY: number = (1.025 * this.boardSprite.height) - (0.158333 * this.boardSprite.height * row);
         const chips: PIXI.Texture[] = [this.app.resources.chipBlue.texture, this.app.resources.chipRed.texture];
 
         new TWEEN.Tween(this.activeChip)
             .to({ y: slotY }, 1000)
             .easing(TWEEN.Easing.Bounce.Out)
             .onComplete(() => {
-                this.activeChip = this.createNewChip(chips[chipId]);
-                this.moveActiveChip(this.currentColumn);
-                this.layer.addChild(this.activeChip);
-                this.columnsLocked = false;
-                this.app.chipLandedCallback();
+                if (!this.gameOver) {
+                    this.columnsLocked = false;
+                    this.activeChip = this.createNewChip(chips[(chips.indexOf(this.activeChip.texture) + 1) % 2]);
+                    this.moveActiveChip(this.currentColumn);
+                    this.layer.addChild(this.activeChip);
+                    this.switchCurrentPlayer();
+                    this.app.chipLandedCallback();
+                }
             })
             .start();
 
-        this.app.chips[row][this.currentHandPosition] = this.activeChip;
+        this.chips[row][this.currentHandPosition] = this.activeChip;
     }
 
-    public moveActiveChip(column: PIXI.Graphics) {
+    public finish(tie: boolean = false) {
+        this.gameOver = true;
+        const finishMessage = (tie) ? "You tied!" : (this.playerOneHighlight.visible) ?
+            this.app.playerOneName + " wins!" : this.app.playerTwoName + " wins!";
+        const textStyle: PIXI.TextStyle = new PIXI.TextStyle({
+            align: "center", fill: 0xFFFFFF, fontFamily: "Arial",
+            fontSize: 50, fontWeight: "bold",
+            stroke: 0x000000, strokeThickness: 10,
+        });
+        const winText: PIXI.Text = new PIXI.Text(finishMessage, textStyle);
+        winText.scale.set(0.1);
+        winText.anchor.set(0.5, 0.5);
+        winText.position.set(250, 150);
+
+        new TWEEN.Tween(winText.scale)
+            .to({ x: 1, y: 1 }, 200)
+            .easing(TWEEN.Easing.Elastic.Out)
+            .onStart(() => {
+                this.layer.addChild(winText);
+            })
+            .onComplete(() => {
+                setTimeout(() => {
+                    this.app.updateState(MenuState);
+                }, 4000);
+            })
+            .delay(1000)
+            .start();
+    }
+
+    public moveActiveChip(column: number) {
+        this.currentHandPosition = column;
+        const columnGraphic = this.columns[column];
         this.activeChip.visible = false;
         this.activeChip.width = 20;
         this.activeChip.height = 20;
         this.activeChip.visible = true;
-        this.activeChip.x = column.x + (column.width / 2);
+        this.activeChip.x = columnGraphic.x + (columnGraphic.width / 2);
 
         new TWEEN.Tween(this.activeChip)
             .to({ width: 60, height: 60 }, 400)
@@ -89,10 +137,9 @@ export class GameState extends State {
             column.x = boardEdge + 10 + (63 * i);
 
             column.on("mouseover", () => {
-                this.currentHandPosition = i;
-                this.currentColumn = column;
+                this.currentColumn = i;
                 if (!this.columnsLocked) {
-                    this.moveActiveChip(column);
+                    this.moveActiveChip(i);
                 }
             });
 
@@ -107,24 +154,48 @@ export class GameState extends State {
         }
     }
 
-    public getColumn(column: number): PIXI.Graphics {
-        return this.columns[column];
+    public switchCurrentPlayer() {
+        [this.playerOneChip.alpha, this.playerOneHighlight.visible,
+            this.playerTwoChip.alpha, this.playerTwoHighlight.visible] =
+            (this.playerOneHighlight.visible) ? [0.5, false, 1, true] :
+            [1, true, 0.5, false];
     }
 
     public showWinningChips(winningPositions: Array<[number, number]>) {
         for (const position of winningPositions) {
             const [row, column] = position;
-            const chip: PIXI.Sprite = this.app.chips[row][column];
-            new TWEEN.Tween(chip)
-                .to({ alpha: 0.5 }, 500)
-                .easing(TWEEN.Easing.Quartic.Out)
-                .repeat(5)
+            const chip: PIXI.Sprite = this.chips[row][column];
+            const fade = new TWEEN.Tween(chip)
+                .to({ alpha: [0, 1] }, 1000)
+                .easing(TWEEN.Easing.Linear.None)
+                .repeat(Infinity)
                 .start();
         }
     }
 
     public show(): void {
+        new TWEEN.Tween(this.app.logoSprite)
+            .to({ y: -60 }, 1000)
+            .easing(TWEEN.Easing.Back.InOut)
+            .onComplete(() => {
+                this.draw();
+            })
+            .start();
+    }
+
+    public hide(): void {
+        this.layer.visible = false;
+        this.gameOver = false;
+        this.columnsLocked = false;
         this.layer.removeChildren();
+        this.app.resetCallback();
+        new TWEEN.Tween(this.app.logoSprite)
+            .to({ y: 60 }, 1000)
+            .easing(TWEEN.Easing.Back.InOut)
+            .start();
+    }
+
+    private draw(): void {
         this.slotGroup = new PIXI.display.Group(1, false);
         const boardGroup = new PIXI.display.Group(2, false);
         this.activeGroup = new PIXI.display.Group(3, false);
@@ -136,15 +207,14 @@ export class GameState extends State {
         this.boardSprite.parentGroup = boardGroup;
 
         this.boardSprite.anchor.x = 0.5;
-        this.boardSprite.y = 50;
-        this.boardSprite.x = 250;
+        this.boardSprite.position.set(250, 50);
         this.boardSprite.scale.set(0.5, 0.5);
 
         this.activeChip = this.createNewChip(this.app.resources.chipBlue.texture);
         this.layer.addChild(this.boardSprite, this.activeChip);
 
         this.createColumns();
-        this.moveActiveChip(this.getColumn(0));
+        this.moveActiveChip(0);
 
         const textStyle: PIXI.TextStyle = new PIXI.TextStyle({
             align: "center", fill: 0xFFFFFF, fontFamily: "Arial",
@@ -157,33 +227,34 @@ export class GameState extends State {
         playerOneNickname.position.set(100, 460);
         playerTwoNickname.position.set(playerOneNickname.x, playerOneNickname.y + playerOneNickname.height + 10);
 
-        const playerOneHighlight: PIXI.Graphics = new PIXI.Graphics();
-        playerOneHighlight.lineStyle(0, 0, 1);
-        playerOneHighlight.beginFill(0x000000, 0.25);
-        playerOneHighlight.drawRoundedRect(playerOneNickname.x, playerOneNickname.y,
-                playerOneNickname.width, playerOneNickname.height, 10);
-        playerOneHighlight.endFill();
+        const highlightText = (text: PIXI.Text): PIXI.Graphics => {
+            const highlight: PIXI.Graphics = new PIXI.Graphics();
+            highlight.lineStyle(0, 0, 1);
+            highlight.beginFill(0x000000, 0.25);
+            highlight.drawRoundedRect(text.x, text.y,
+                    text.width, text.height, 10);
+            highlight.endFill();
+            return highlight;
+        };
 
-        const redChip: PIXI.Sprite = new PIXI.Sprite(this.app.resources.chipBlue.texture);
-        const blueChip: PIXI.Sprite = new PIXI.Sprite(this.app.resources.chipRed.texture);
-        redChip.scale.set(0.6, 0.6);
-        redChip.position.set(20, playerOneNickname.y);
-        blueChip.scale.set(0.6, 0.6);
-        blueChip.position.set(20, playerTwoNickname.y);
+        this.playerOneHighlight = highlightText(playerOneNickname);
+        this.playerTwoHighlight = highlightText(playerTwoNickname);
+        this.playerTwoHighlight.visible = false;
+
+        this.playerOneChip = new PIXI.Sprite(this.app.resources.chipBlue.texture);
+        this.playerTwoChip = new PIXI.Sprite(this.app.resources.chipRed.texture);
+        this.playerOneChip.scale.set(0.6, 0.6);
+        this.playerOneChip.position.set(20, playerOneNickname.y);
+        this.playerTwoChip.scale.set(0.6, 0.6);
+        this.playerTwoChip.position.set(20, playerTwoNickname.y);
+        this.playerTwoChip.alpha = 0.5;
         const back: pixi_display.Layer = this.drawButton(20, 610, 100, 50, "Quit");
         back.on("mouseup", () => {
             this.app.updateState(MenuState);
-            new TWEEN.Tween(this.app.logoSprite)
-                .to({ y: ((this.app.logoSprite.y === 60) ? -60 : 60) }, 1000)
-                .easing(TWEEN.Easing.Back.InOut)
-                .start();
         });
-        this.layer.addChild(playerOneHighlight, playerOneNickname, playerTwoNickname,
-            redChip, blueChip, back);
+        this.layer.addChild(this.playerOneHighlight, this.playerTwoHighlight,
+            playerOneNickname, playerTwoNickname, this.playerOneChip, this.playerTwoChip,
+            back);
         this.layer.visible = true;
-    }
-
-    public hide(): void {
-        this.layer.visible = false;
     }
 }

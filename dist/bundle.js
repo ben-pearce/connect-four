@@ -115,7 +115,7 @@ Object.defineProperty(exports, 'Bounds', {
   }
 });
 
-var _DisplayObject = __webpack_require__(52);
+var _DisplayObject = __webpack_require__(53);
 
 Object.defineProperty(exports, 'DisplayObject', {
   enumerable: true,
@@ -133,7 +133,7 @@ Object.defineProperty(exports, 'Container', {
   }
 });
 
-var _Transform = __webpack_require__(54);
+var _Transform = __webpack_require__(55);
 
 Object.defineProperty(exports, 'Transform', {
   enumerable: true,
@@ -142,7 +142,7 @@ Object.defineProperty(exports, 'Transform', {
   }
 });
 
-var _TransformStatic = __webpack_require__(53);
+var _TransformStatic = __webpack_require__(54);
 
 Object.defineProperty(exports, 'TransformStatic', {
   enumerable: true,
@@ -205,7 +205,7 @@ Object.defineProperty(exports, 'Text', {
   }
 });
 
-var _TextStyle = __webpack_require__(67);
+var _TextStyle = __webpack_require__(68);
 
 Object.defineProperty(exports, 'TextStyle', {
   enumerable: true,
@@ -214,7 +214,7 @@ Object.defineProperty(exports, 'TextStyle', {
   }
 });
 
-var _TextMetrics = __webpack_require__(68);
+var _TextMetrics = __webpack_require__(69);
 
 Object.defineProperty(exports, 'TextMetrics', {
   enumerable: true,
@@ -232,7 +232,7 @@ Object.defineProperty(exports, 'Graphics', {
   }
 });
 
-var _GraphicsData = __webpack_require__(69);
+var _GraphicsData = __webpack_require__(70);
 
 Object.defineProperty(exports, 'GraphicsData', {
   enumerable: true,
@@ -277,7 +277,7 @@ Object.defineProperty(exports, 'Texture', {
   }
 });
 
-var _TextureMatrix = __webpack_require__(65);
+var _TextureMatrix = __webpack_require__(66);
 
 Object.defineProperty(exports, 'TextureMatrix', {
   enumerable: true,
@@ -304,7 +304,7 @@ Object.defineProperty(exports, 'RenderTexture', {
   }
 });
 
-var _BaseRenderTexture = __webpack_require__(60);
+var _BaseRenderTexture = __webpack_require__(61);
 
 Object.defineProperty(exports, 'BaseRenderTexture', {
   enumerable: true,
@@ -313,7 +313,7 @@ Object.defineProperty(exports, 'BaseRenderTexture', {
   }
 });
 
-var _VideoBaseTexture = __webpack_require__(57);
+var _VideoBaseTexture = __webpack_require__(58);
 
 Object.defineProperty(exports, 'VideoBaseTexture', {
   enumerable: true,
@@ -322,7 +322,7 @@ Object.defineProperty(exports, 'VideoBaseTexture', {
   }
 });
 
-var _TextureUvs = __webpack_require__(58);
+var _TextureUvs = __webpack_require__(59);
 
 Object.defineProperty(exports, 'TextureUvs', {
   enumerable: true,
@@ -331,7 +331,7 @@ Object.defineProperty(exports, 'TextureUvs', {
   }
 });
 
-var _CanvasRenderTarget = __webpack_require__(61);
+var _CanvasRenderTarget = __webpack_require__(62);
 
 Object.defineProperty(exports, 'CanvasRenderTarget', {
   enumerable: true,
@@ -358,7 +358,7 @@ Object.defineProperty(exports, 'WebGLManager', {
   }
 });
 
-var _ObjectRenderer = __webpack_require__(18);
+var _ObjectRenderer = __webpack_require__(19);
 
 Object.defineProperty(exports, 'ObjectRenderer', {
   enumerable: true,
@@ -367,7 +367,7 @@ Object.defineProperty(exports, 'ObjectRenderer', {
   }
 });
 
-var _RenderTarget = __webpack_require__(20);
+var _RenderTarget = __webpack_require__(21);
 
 Object.defineProperty(exports, 'RenderTarget', {
   enumerable: true,
@@ -376,7 +376,7 @@ Object.defineProperty(exports, 'RenderTarget', {
   }
 });
 
-var _Quad = __webpack_require__(66);
+var _Quad = __webpack_require__(67);
 
 Object.defineProperty(exports, 'Quad', {
   enumerable: true,
@@ -385,7 +385,7 @@ Object.defineProperty(exports, 'Quad', {
   }
 });
 
-var _SpriteMaskFilter = __webpack_require__(63);
+var _SpriteMaskFilter = __webpack_require__(64);
 
 Object.defineProperty(exports, 'SpriteMaskFilter', {
   enumerable: true,
@@ -394,7 +394,7 @@ Object.defineProperty(exports, 'SpriteMaskFilter', {
   }
 });
 
-var _Filter = __webpack_require__(64);
+var _Filter = __webpack_require__(65);
 
 Object.defineProperty(exports, 'Filter', {
   enumerable: true,
@@ -403,7 +403,7 @@ Object.defineProperty(exports, 'Filter', {
   }
 });
 
-var _Application = __webpack_require__(71);
+var _Application = __webpack_require__(72);
 
 Object.defineProperty(exports, 'Application', {
   enumerable: true,
@@ -412,7 +412,7 @@ Object.defineProperty(exports, 'Application', {
   }
 });
 
-var _autoDetectRenderer = __webpack_require__(72);
+var _autoDetectRenderer = __webpack_require__(73);
 
 Object.defineProperty(exports, 'autoDetectRenderer', {
   enumerable: true,
@@ -437,7 +437,7 @@ var _CanvasRenderer = __webpack_require__(13);
 
 var _CanvasRenderer2 = _interopRequireDefault(_CanvasRenderer);
 
-var _WebGLRenderer = __webpack_require__(19);
+var _WebGLRenderer = __webpack_require__(20);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
@@ -1552,7 +1552,7 @@ Object.defineProperty(exports, 'Point', {
   }
 });
 
-var _ObservablePoint = __webpack_require__(41);
+var _ObservablePoint = __webpack_require__(42);
 
 Object.defineProperty(exports, 'ObservablePoint', {
   enumerable: true,
@@ -1570,7 +1570,7 @@ Object.defineProperty(exports, 'Matrix', {
   }
 });
 
-var _GroupD = __webpack_require__(42);
+var _GroupD = __webpack_require__(43);
 
 Object.defineProperty(exports, 'GroupD8', {
   enumerable: true,
@@ -1633,11 +1633,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var gl = {
     createContext:          __webpack_require__(107),
-    setVertexAttribArrays:  __webpack_require__(43),
+    setVertexAttribArrays:  __webpack_require__(44),
     GLBuffer:               __webpack_require__(108),
     GLFramebuffer:          __webpack_require__(109),
     GLShader:               __webpack_require__(110),
-    GLTexture:              __webpack_require__(44),
+    GLTexture:              __webpack_require__(45),
     VertexArrayObject:      __webpack_require__(111),
     shader:                 __webpack_require__(112)
 };
@@ -1679,11 +1679,11 @@ var _BaseTexture = __webpack_require__(9);
 
 var _BaseTexture2 = _interopRequireDefault(_BaseTexture);
 
-var _VideoBaseTexture = __webpack_require__(57);
+var _VideoBaseTexture = __webpack_require__(58);
 
 var _VideoBaseTexture2 = _interopRequireDefault(_VideoBaseTexture);
 
-var _TextureUvs = __webpack_require__(58);
+var _TextureUvs = __webpack_require__(59);
 
 var _TextureUvs2 = _interopRequireDefault(_TextureUvs);
 
@@ -2698,7 +2698,7 @@ var _eventemitter = __webpack_require__(8);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _determineCrossOrigin = __webpack_require__(55);
+var _determineCrossOrigin = __webpack_require__(56);
 
 var _determineCrossOrigin2 = _interopRequireDefault(_determineCrossOrigin);
 
@@ -4128,7 +4128,7 @@ var _extract = __webpack_require__(155);
 
 var extract = _interopRequireWildcard(_extract);
 
-var _extras = __webpack_require__(74);
+var _extras = __webpack_require__(75);
 
 var extras = _interopRequireWildcard(_extras);
 
@@ -4212,7 +4212,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _utils = __webpack_require__(2);
 
-var _DisplayObject2 = __webpack_require__(52);
+var _DisplayObject2 = __webpack_require__(53);
 
 var _DisplayObject3 = _interopRequireDefault(_DisplayObject2);
 
@@ -4831,7 +4831,7 @@ Container.prototype.containerUpdateTransform = Container.prototype.updateTransfo
 
 exports.__esModule = true;
 
-var _SystemRenderer2 = __webpack_require__(59);
+var _SystemRenderer2 = __webpack_require__(60);
 
 var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
 
@@ -4839,7 +4839,7 @@ var _CanvasMaskManager = __webpack_require__(122);
 
 var _CanvasMaskManager2 = _interopRequireDefault(_CanvasMaskManager);
 
-var _CanvasRenderTarget = __webpack_require__(61);
+var _CanvasRenderTarget = __webpack_require__(62);
 
 var _CanvasRenderTarget2 = _interopRequireDefault(_CanvasRenderTarget);
 
@@ -5340,8 +5340,8 @@ exports.default = Shader;
 
 var Loader = __webpack_require__(175).default;
 var Resource = __webpack_require__(38).default;
-var async = __webpack_require__(87);
-var b64 = __webpack_require__(88);
+var async = __webpack_require__(88);
+var b64 = __webpack_require__(89);
 
 Loader.Resource = Resource;
 Loader.async = async;
@@ -5733,6 +5733,91 @@ Mesh.DRAW_MODES = {
 
 "use strict";
 
+Object.defineProperty(exports, "__esModule", { value: true });
+const TWEEN = __webpack_require__(41);
+const PIXI = __webpack_require__(11);
+__webpack_require__(10);
+const menuState_1 = __webpack_require__(23);
+class FourFace {
+    constructor() {
+        this.gameMode = FourFace.Multiplayer;
+        this.difficulty = FourFace.Easy;
+        this.states = {};
+        this.app = new PIXI.Application({
+            antialias: true, height: 670,
+            transparent: true, width: 500,
+        });
+        this.loader = new PIXI.loaders.Loader();
+        this.app.stage = new PIXI.display.Stage();
+        requestAnimationFrame((time) => {
+            this.animate(time);
+        });
+        this.loader.add("logo", "images/logo.png")
+            .add("board", "images/board.png")
+            .add("chipBlue", "images/chip-blue.png")
+            .add("chipRed", "images/chip-red.png")
+            .load((loader, resources) => {
+            this.assetsLoaded(loader, resources);
+        });
+    }
+    animate(time) {
+        requestAnimationFrame((frameTime) => {
+            this.animate(frameTime);
+        });
+        TWEEN.update(time);
+    }
+    updateState(state) {
+        if (this.currentState !== undefined) {
+            this.currentState.hide();
+        }
+        this.states[state.name] = (state.name in this.states)
+            ? this.states[state.name] : new state(this);
+        this.currentState = this.states[state.name];
+        this.currentState.show();
+    }
+    getState(state) {
+        return this.states[state.name];
+    }
+    assetsLoaded(loader, resources) {
+        this.resources = resources;
+        this.logoSprite = new PIXI.Sprite(resources.logo.texture);
+        this.logoSprite.position.set(this.app.renderer.width / 2, this.app.renderer.height / 2);
+        this.logoSprite.anchor.set(0.5, 0.5);
+        this.logoSprite.scale.set(0.1);
+        this.updateState(menuState_1.MenuState);
+        const menuState = this.getState(menuState_1.MenuState);
+        [menuState.multiplayer.alpha, menuState.computer.alpha] = [0, 0];
+        this.app.stage.addChild(this.logoSprite);
+        const scale = new TWEEN.Tween(this.logoSprite.scale)
+            .to({ x: 0.8, y: 0.8 }, 500)
+            .easing(TWEEN.Easing.Elastic.Out);
+        const move = new TWEEN.Tween(this.logoSprite)
+            .to({ y: 60 }, 1000).easing(TWEEN.Easing.Quadratic.InOut);
+        const showMultiplayer = new TWEEN.Tween(menuState.multiplayer)
+            .to({ alpha: 1 }, 100).easing(TWEEN.Easing.Linear.None)
+            .delay(600);
+        const showComputer = new TWEEN.Tween(menuState.computer)
+            .to({ alpha: 1 }, 100).easing(TWEEN.Easing.Linear.None)
+            .delay(200);
+        scale.chain(move, showComputer, showMultiplayer).start();
+    }
+}
+FourFace.Multiplayer = 0;
+FourFace.Computer = 1;
+FourFace.Easy = 4;
+FourFace.Medium = 6;
+FourFace.Hard = 8;
+FourFace.rows = 6;
+FourFace.cols = 7;
+exports.FourFace = FourFace;
+
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 exports.__esModule = true;
 
@@ -5811,7 +5896,7 @@ exports.default = ObjectRenderer;
 //# sourceMappingURL=ObjectRenderer.js.map
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5819,7 +5904,7 @@ exports.default = ObjectRenderer;
 
 exports.__esModule = true;
 
-var _SystemRenderer2 = __webpack_require__(59);
+var _SystemRenderer2 = __webpack_require__(60);
 
 var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
 
@@ -5835,11 +5920,11 @@ var _FilterManager = __webpack_require__(128);
 
 var _FilterManager2 = _interopRequireDefault(_FilterManager);
 
-var _RenderTarget = __webpack_require__(20);
+var _RenderTarget = __webpack_require__(21);
 
 var _RenderTarget2 = _interopRequireDefault(_RenderTarget);
 
-var _ObjectRenderer = __webpack_require__(18);
+var _ObjectRenderer = __webpack_require__(19);
 
 var _ObjectRenderer2 = _interopRequireDefault(_ObjectRenderer);
 
@@ -6633,7 +6718,7 @@ _utils.pluginTarget.mixin(WebGLRenderer);
 //# sourceMappingURL=WebGLRenderer.js.map
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6965,7 +7050,7 @@ exports.default = RenderTarget;
 //# sourceMappingURL=RenderTarget.js.map
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7240,7 +7325,7 @@ function buildNativeLine(graphicsData, webGLData) {
 //# sourceMappingURL=buildLine.js.map
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7249,7 +7334,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __webpack_require__(10);
 const computerState_1 = __webpack_require__(192);
 const multiplayerState_1 = __webpack_require__(193);
-const state_1 = __webpack_require__(23);
+const state_1 = __webpack_require__(24);
 class MenuState extends state_1.State {
     constructor(app) {
         super(app);
@@ -7274,7 +7359,7 @@ exports.MenuState = MenuState;
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7334,6 +7419,9 @@ class State {
         layer.interactive = true;
         return layer;
     }
+    tidyDisplayName(name) {
+        return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    }
     createTextBox(x, y, width) {
         const input = document.createElement("input");
         input.type = "text";
@@ -7354,930 +7442,6 @@ class State {
     }
 }
 exports.State = State;
-
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
- * Tween.js - Licensed under the MIT license
- * https://github.com/tweenjs/tween.js
- * ----------------------------------------------
- *
- * See https://github.com/tweenjs/tween.js/graphs/contributors for the full list of contributors.
- * Thank you all, you're awesome!
- */
-
-
-var _Group = function () {
-	this._tweens = {};
-	this._tweensAddedDuringUpdate = {};
-};
-
-_Group.prototype = {
-	getAll: function () {
-
-		return Object.keys(this._tweens).map(function (tweenId) {
-			return this._tweens[tweenId];
-		}.bind(this));
-
-	},
-
-	removeAll: function () {
-
-		this._tweens = {};
-
-	},
-
-	add: function (tween) {
-
-		this._tweens[tween.getId()] = tween;
-		this._tweensAddedDuringUpdate[tween.getId()] = tween;
-
-	},
-
-	remove: function (tween) {
-
-		delete this._tweens[tween.getId()];
-		delete this._tweensAddedDuringUpdate[tween.getId()];
-
-	},
-
-	update: function (time, preserve) {
-
-		var tweenIds = Object.keys(this._tweens);
-
-		if (tweenIds.length === 0) {
-			return false;
-		}
-
-		time = time !== undefined ? time : TWEEN.now();
-
-		// Tweens are updated in "batches". If you add a new tween during an update, then the
-		// new tween will be updated in the next batch.
-		// If you remove a tween during an update, it may or may not be updated. However,
-		// if the removed tween was added during the current batch, then it will not be updated.
-		while (tweenIds.length > 0) {
-			this._tweensAddedDuringUpdate = {};
-
-			for (var i = 0; i < tweenIds.length; i++) {
-
-				var tween = this._tweens[tweenIds[i]];
-
-				if (tween && tween.update(time) === false) {
-					tween._isPlaying = false;
-
-					if (!preserve) {
-						delete this._tweens[tweenIds[i]];
-					}
-				}
-			}
-
-			tweenIds = Object.keys(this._tweensAddedDuringUpdate);
-		}
-
-		return true;
-
-	}
-};
-
-var TWEEN = new _Group();
-
-TWEEN.Group = _Group;
-TWEEN._nextId = 0;
-TWEEN.nextId = function () {
-	return TWEEN._nextId++;
-};
-
-
-// Include a performance.now polyfill.
-// In node.js, use process.hrtime.
-if (typeof (window) === 'undefined' && typeof (process) !== 'undefined') {
-	TWEEN.now = function () {
-		var time = process.hrtime();
-
-		// Convert [seconds, nanoseconds] to milliseconds.
-		return time[0] * 1000 + time[1] / 1000000;
-	};
-}
-// In a browser, use window.performance.now if it is available.
-else if (typeof (window) !== 'undefined' &&
-         window.performance !== undefined &&
-		 window.performance.now !== undefined) {
-	// This must be bound, because directly assigning this function
-	// leads to an invocation exception in Chrome.
-	TWEEN.now = window.performance.now.bind(window.performance);
-}
-// Use Date.now if it is available.
-else if (Date.now !== undefined) {
-	TWEEN.now = Date.now;
-}
-// Otherwise, use 'new Date().getTime()'.
-else {
-	TWEEN.now = function () {
-		return new Date().getTime();
-	};
-}
-
-
-TWEEN.Tween = function (object, group) {
-	this._object = object;
-	this._valuesStart = {};
-	this._valuesEnd = {};
-	this._valuesStartRepeat = {};
-	this._duration = 1000;
-	this._repeat = 0;
-	this._repeatDelayTime = undefined;
-	this._yoyo = false;
-	this._isPlaying = false;
-	this._reversed = false;
-	this._delayTime = 0;
-	this._startTime = null;
-	this._easingFunction = TWEEN.Easing.Linear.None;
-	this._interpolationFunction = TWEEN.Interpolation.Linear;
-	this._chainedTweens = [];
-	this._onStartCallback = null;
-	this._onStartCallbackFired = false;
-	this._onUpdateCallback = null;
-	this._onCompleteCallback = null;
-	this._onStopCallback = null;
-	this._group = group || TWEEN;
-	this._id = TWEEN.nextId();
-
-};
-
-TWEEN.Tween.prototype = {
-	getId: function getId() {
-		return this._id;
-	},
-
-	isPlaying: function isPlaying() {
-		return this._isPlaying;
-	},
-
-	to: function to(properties, duration) {
-
-		this._valuesEnd = properties;
-
-		if (duration !== undefined) {
-			this._duration = duration;
-		}
-
-		return this;
-
-	},
-
-	start: function start(time) {
-
-		this._group.add(this);
-
-		this._isPlaying = true;
-
-		this._onStartCallbackFired = false;
-
-		this._startTime = time !== undefined ? typeof time === 'string' ? TWEEN.now() + parseFloat(time) : time : TWEEN.now();
-		this._startTime += this._delayTime;
-
-		for (var property in this._valuesEnd) {
-
-			// Check if an Array was provided as property value
-			if (this._valuesEnd[property] instanceof Array) {
-
-				if (this._valuesEnd[property].length === 0) {
-					continue;
-				}
-
-				// Create a local copy of the Array with the start value at the front
-				this._valuesEnd[property] = [this._object[property]].concat(this._valuesEnd[property]);
-
-			}
-
-			// If `to()` specifies a property that doesn't exist in the source object,
-			// we should not set that property in the object
-			if (this._object[property] === undefined) {
-				continue;
-			}
-
-			// Save the starting value.
-			this._valuesStart[property] = this._object[property];
-
-			if ((this._valuesStart[property] instanceof Array) === false) {
-				this._valuesStart[property] *= 1.0; // Ensures we're using numbers, not strings
-			}
-
-			this._valuesStartRepeat[property] = this._valuesStart[property] || 0;
-
-		}
-
-		return this;
-
-	},
-
-	stop: function stop() {
-
-		if (!this._isPlaying) {
-			return this;
-		}
-
-		this._group.remove(this);
-		this._isPlaying = false;
-
-		if (this._onStopCallback !== null) {
-			this._onStopCallback(this._object);
-		}
-
-		this.stopChainedTweens();
-		return this;
-
-	},
-
-	end: function end() {
-
-		this.update(this._startTime + this._duration);
-		return this;
-
-	},
-
-	stopChainedTweens: function stopChainedTweens() {
-
-		for (var i = 0, numChainedTweens = this._chainedTweens.length; i < numChainedTweens; i++) {
-			this._chainedTweens[i].stop();
-		}
-
-	},
-
-	group: function group(group) {
-		this._group = group;
-		return this;
-	},
-
-	delay: function delay(amount) {
-
-		this._delayTime = amount;
-		return this;
-
-	},
-
-	repeat: function repeat(times) {
-
-		this._repeat = times;
-		return this;
-
-	},
-
-	repeatDelay: function repeatDelay(amount) {
-
-		this._repeatDelayTime = amount;
-		return this;
-
-	},
-
-	yoyo: function yoyo(yy) {
-
-		this._yoyo = yy;
-		return this;
-
-	},
-
-	easing: function easing(eas) {
-
-		this._easingFunction = eas;
-		return this;
-
-	},
-
-	interpolation: function interpolation(inter) {
-
-		this._interpolationFunction = inter;
-		return this;
-
-	},
-
-	chain: function chain() {
-
-		this._chainedTweens = arguments;
-		return this;
-
-	},
-
-	onStart: function onStart(callback) {
-
-		this._onStartCallback = callback;
-		return this;
-
-	},
-
-	onUpdate: function onUpdate(callback) {
-
-		this._onUpdateCallback = callback;
-		return this;
-
-	},
-
-	onComplete: function onComplete(callback) {
-
-		this._onCompleteCallback = callback;
-		return this;
-
-	},
-
-	onStop: function onStop(callback) {
-
-		this._onStopCallback = callback;
-		return this;
-
-	},
-
-	update: function update(time) {
-
-		var property;
-		var elapsed;
-		var value;
-
-		if (time < this._startTime) {
-			return true;
-		}
-
-		if (this._onStartCallbackFired === false) {
-
-			if (this._onStartCallback !== null) {
-				this._onStartCallback(this._object);
-			}
-
-			this._onStartCallbackFired = true;
-		}
-
-		elapsed = (time - this._startTime) / this._duration;
-		elapsed = (this._duration === 0 || elapsed > 1) ? 1 : elapsed;
-
-		value = this._easingFunction(elapsed);
-
-		for (property in this._valuesEnd) {
-
-			// Don't update properties that do not exist in the source object
-			if (this._valuesStart[property] === undefined) {
-				continue;
-			}
-
-			var start = this._valuesStart[property] || 0;
-			var end = this._valuesEnd[property];
-
-			if (end instanceof Array) {
-
-				this._object[property] = this._interpolationFunction(end, value);
-
-			} else {
-
-				// Parses relative end values with start as base (e.g.: +10, -3)
-				if (typeof (end) === 'string') {
-
-					if (end.charAt(0) === '+' || end.charAt(0) === '-') {
-						end = start + parseFloat(end);
-					} else {
-						end = parseFloat(end);
-					}
-				}
-
-				// Protect against non numeric properties.
-				if (typeof (end) === 'number') {
-					this._object[property] = start + (end - start) * value;
-				}
-
-			}
-
-		}
-
-		if (this._onUpdateCallback !== null) {
-			this._onUpdateCallback(this._object);
-		}
-
-		if (elapsed === 1) {
-
-			if (this._repeat > 0) {
-
-				if (isFinite(this._repeat)) {
-					this._repeat--;
-				}
-
-				// Reassign starting values, restart by making startTime = now
-				for (property in this._valuesStartRepeat) {
-
-					if (typeof (this._valuesEnd[property]) === 'string') {
-						this._valuesStartRepeat[property] = this._valuesStartRepeat[property] + parseFloat(this._valuesEnd[property]);
-					}
-
-					if (this._yoyo) {
-						var tmp = this._valuesStartRepeat[property];
-
-						this._valuesStartRepeat[property] = this._valuesEnd[property];
-						this._valuesEnd[property] = tmp;
-					}
-
-					this._valuesStart[property] = this._valuesStartRepeat[property];
-
-				}
-
-				if (this._yoyo) {
-					this._reversed = !this._reversed;
-				}
-
-				if (this._repeatDelayTime !== undefined) {
-					this._startTime = time + this._repeatDelayTime;
-				} else {
-					this._startTime = time + this._delayTime;
-				}
-
-				return true;
-
-			} else {
-
-				if (this._onCompleteCallback !== null) {
-
-					this._onCompleteCallback(this._object);
-				}
-
-				for (var i = 0, numChainedTweens = this._chainedTweens.length; i < numChainedTweens; i++) {
-					// Make the chained tweens start exactly at the time they should,
-					// even if the `update()` method was called way past the duration of the tween
-					this._chainedTweens[i].start(this._startTime + this._duration);
-				}
-
-				return false;
-
-			}
-
-		}
-
-		return true;
-
-	}
-};
-
-
-TWEEN.Easing = {
-
-	Linear: {
-
-		None: function (k) {
-
-			return k;
-
-		}
-
-	},
-
-	Quadratic: {
-
-		In: function (k) {
-
-			return k * k;
-
-		},
-
-		Out: function (k) {
-
-			return k * (2 - k);
-
-		},
-
-		InOut: function (k) {
-
-			if ((k *= 2) < 1) {
-				return 0.5 * k * k;
-			}
-
-			return - 0.5 * (--k * (k - 2) - 1);
-
-		}
-
-	},
-
-	Cubic: {
-
-		In: function (k) {
-
-			return k * k * k;
-
-		},
-
-		Out: function (k) {
-
-			return --k * k * k + 1;
-
-		},
-
-		InOut: function (k) {
-
-			if ((k *= 2) < 1) {
-				return 0.5 * k * k * k;
-			}
-
-			return 0.5 * ((k -= 2) * k * k + 2);
-
-		}
-
-	},
-
-	Quartic: {
-
-		In: function (k) {
-
-			return k * k * k * k;
-
-		},
-
-		Out: function (k) {
-
-			return 1 - (--k * k * k * k);
-
-		},
-
-		InOut: function (k) {
-
-			if ((k *= 2) < 1) {
-				return 0.5 * k * k * k * k;
-			}
-
-			return - 0.5 * ((k -= 2) * k * k * k - 2);
-
-		}
-
-	},
-
-	Quintic: {
-
-		In: function (k) {
-
-			return k * k * k * k * k;
-
-		},
-
-		Out: function (k) {
-
-			return --k * k * k * k * k + 1;
-
-		},
-
-		InOut: function (k) {
-
-			if ((k *= 2) < 1) {
-				return 0.5 * k * k * k * k * k;
-			}
-
-			return 0.5 * ((k -= 2) * k * k * k * k + 2);
-
-		}
-
-	},
-
-	Sinusoidal: {
-
-		In: function (k) {
-
-			return 1 - Math.cos(k * Math.PI / 2);
-
-		},
-
-		Out: function (k) {
-
-			return Math.sin(k * Math.PI / 2);
-
-		},
-
-		InOut: function (k) {
-
-			return 0.5 * (1 - Math.cos(Math.PI * k));
-
-		}
-
-	},
-
-	Exponential: {
-
-		In: function (k) {
-
-			return k === 0 ? 0 : Math.pow(1024, k - 1);
-
-		},
-
-		Out: function (k) {
-
-			return k === 1 ? 1 : 1 - Math.pow(2, - 10 * k);
-
-		},
-
-		InOut: function (k) {
-
-			if (k === 0) {
-				return 0;
-			}
-
-			if (k === 1) {
-				return 1;
-			}
-
-			if ((k *= 2) < 1) {
-				return 0.5 * Math.pow(1024, k - 1);
-			}
-
-			return 0.5 * (- Math.pow(2, - 10 * (k - 1)) + 2);
-
-		}
-
-	},
-
-	Circular: {
-
-		In: function (k) {
-
-			return 1 - Math.sqrt(1 - k * k);
-
-		},
-
-		Out: function (k) {
-
-			return Math.sqrt(1 - (--k * k));
-
-		},
-
-		InOut: function (k) {
-
-			if ((k *= 2) < 1) {
-				return - 0.5 * (Math.sqrt(1 - k * k) - 1);
-			}
-
-			return 0.5 * (Math.sqrt(1 - (k -= 2) * k) + 1);
-
-		}
-
-	},
-
-	Elastic: {
-
-		In: function (k) {
-
-			if (k === 0) {
-				return 0;
-			}
-
-			if (k === 1) {
-				return 1;
-			}
-
-			return -Math.pow(2, 10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI);
-
-		},
-
-		Out: function (k) {
-
-			if (k === 0) {
-				return 0;
-			}
-
-			if (k === 1) {
-				return 1;
-			}
-
-			return Math.pow(2, -10 * k) * Math.sin((k - 0.1) * 5 * Math.PI) + 1;
-
-		},
-
-		InOut: function (k) {
-
-			if (k === 0) {
-				return 0;
-			}
-
-			if (k === 1) {
-				return 1;
-			}
-
-			k *= 2;
-
-			if (k < 1) {
-				return -0.5 * Math.pow(2, 10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI);
-			}
-
-			return 0.5 * Math.pow(2, -10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI) + 1;
-
-		}
-
-	},
-
-	Back: {
-
-		In: function (k) {
-
-			var s = 1.70158;
-
-			return k * k * ((s + 1) * k - s);
-
-		},
-
-		Out: function (k) {
-
-			var s = 1.70158;
-
-			return --k * k * ((s + 1) * k + s) + 1;
-
-		},
-
-		InOut: function (k) {
-
-			var s = 1.70158 * 1.525;
-
-			if ((k *= 2) < 1) {
-				return 0.5 * (k * k * ((s + 1) * k - s));
-			}
-
-			return 0.5 * ((k -= 2) * k * ((s + 1) * k + s) + 2);
-
-		}
-
-	},
-
-	Bounce: {
-
-		In: function (k) {
-
-			return 1 - TWEEN.Easing.Bounce.Out(1 - k);
-
-		},
-
-		Out: function (k) {
-
-			if (k < (1 / 2.75)) {
-				return 7.5625 * k * k;
-			} else if (k < (2 / 2.75)) {
-				return 7.5625 * (k -= (1.5 / 2.75)) * k + 0.75;
-			} else if (k < (2.5 / 2.75)) {
-				return 7.5625 * (k -= (2.25 / 2.75)) * k + 0.9375;
-			} else {
-				return 7.5625 * (k -= (2.625 / 2.75)) * k + 0.984375;
-			}
-
-		},
-
-		InOut: function (k) {
-
-			if (k < 0.5) {
-				return TWEEN.Easing.Bounce.In(k * 2) * 0.5;
-			}
-
-			return TWEEN.Easing.Bounce.Out(k * 2 - 1) * 0.5 + 0.5;
-
-		}
-
-	}
-
-};
-
-TWEEN.Interpolation = {
-
-	Linear: function (v, k) {
-
-		var m = v.length - 1;
-		var f = m * k;
-		var i = Math.floor(f);
-		var fn = TWEEN.Interpolation.Utils.Linear;
-
-		if (k < 0) {
-			return fn(v[0], v[1], f);
-		}
-
-		if (k > 1) {
-			return fn(v[m], v[m - 1], m - f);
-		}
-
-		return fn(v[i], v[i + 1 > m ? m : i + 1], f - i);
-
-	},
-
-	Bezier: function (v, k) {
-
-		var b = 0;
-		var n = v.length - 1;
-		var pw = Math.pow;
-		var bn = TWEEN.Interpolation.Utils.Bernstein;
-
-		for (var i = 0; i <= n; i++) {
-			b += pw(1 - k, n - i) * pw(k, i) * v[i] * bn(n, i);
-		}
-
-		return b;
-
-	},
-
-	CatmullRom: function (v, k) {
-
-		var m = v.length - 1;
-		var f = m * k;
-		var i = Math.floor(f);
-		var fn = TWEEN.Interpolation.Utils.CatmullRom;
-
-		if (v[0] === v[m]) {
-
-			if (k < 0) {
-				i = Math.floor(f = m * (1 + k));
-			}
-
-			return fn(v[(i - 1 + m) % m], v[i], v[(i + 1) % m], v[(i + 2) % m], f - i);
-
-		} else {
-
-			if (k < 0) {
-				return v[0] - (fn(v[0], v[0], v[1], v[1], -f) - v[0]);
-			}
-
-			if (k > 1) {
-				return v[m] - (fn(v[m], v[m], v[m - 1], v[m - 1], f - m) - v[m]);
-			}
-
-			return fn(v[i ? i - 1 : 0], v[i], v[m < i + 1 ? m : i + 1], v[m < i + 2 ? m : i + 2], f - i);
-
-		}
-
-	},
-
-	Utils: {
-
-		Linear: function (p0, p1, t) {
-
-			return (p1 - p0) * t + p0;
-
-		},
-
-		Bernstein: function (n, i) {
-
-			var fc = TWEEN.Interpolation.Utils.Factorial;
-
-			return fc(n) / fc(i) / fc(n - i);
-
-		},
-
-		Factorial: (function () {
-
-			var a = [1];
-
-			return function (n) {
-
-				var s = 1;
-
-				if (a[n]) {
-					return a[n];
-				}
-
-				for (var i = n; i > 1; i--) {
-					s *= i;
-				}
-
-				a[n] = s;
-				return s;
-
-			};
-
-		})(),
-
-		CatmullRom: function (p0, p1, p2, p3, t) {
-
-			var v0 = (p2 - p0) * 0.5;
-			var v1 = (p3 - p1) * 0.5;
-			var t2 = t * t;
-			var t3 = t * t2;
-
-			return (2 * p1 - 2 * p2 + v0 + v1) * t3 + (- 3 * p1 + 3 * p2 - 2 * v0 - v1) * t2 + v0 * t + p1;
-
-		}
-
-	}
-
-};
-
-// UMD (Universal Module Definition)
-(function (root) {
-
-	if (true) {
-
-		// AMD
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-			return TWEEN;
-		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-
-	} else if (typeof module !== 'undefined' && typeof exports === 'object') {
-
-		// Node.js
-		module.exports = TWEEN;
-
-	} else if (root !== undefined) {
-
-		// Global variable
-		root.TWEEN = TWEEN;
-
-	}
-
-})(this);
 
 
 /***/ }),
@@ -10751,7 +9915,7 @@ exports.Ticker = _Ticker2.default;
 
 exports.__esModule = true;
 
-var _BaseRenderTexture = __webpack_require__(60);
+var _BaseRenderTexture = __webpack_require__(61);
 
 var _BaseRenderTexture2 = _interopRequireDefault(_BaseRenderTexture);
 
@@ -10912,7 +10076,7 @@ exports.__esModule = true;
 
 var _utils = __webpack_require__(2);
 
-var _canUseNewCanvasBlendModes = __webpack_require__(62);
+var _canUseNewCanvasBlendModes = __webpack_require__(63);
 
 var _canUseNewCanvasBlendModes2 = _interopRequireDefault(_canUseNewCanvasBlendModes);
 
@@ -11207,11 +10371,11 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _parseUri = __webpack_require__(86);
+var _parseUri = __webpack_require__(87);
 
 var _parseUri2 = _interopRequireDefault(_parseUri);
 
-var _miniSignals = __webpack_require__(85);
+var _miniSignals = __webpack_require__(86);
 
 var _miniSignals2 = _interopRequireDefault(_miniSignals);
 
@@ -12370,7 +11534,7 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _CountLimiter = __webpack_require__(92);
+var _CountLimiter = __webpack_require__(93);
 
 var _CountLimiter2 = _interopRequireDefault(_CountLimiter);
 
@@ -12852,12 +12016,1148 @@ function findTextStyle(item, queue) {
 
 /***/ }),
 /* 40 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("electron");
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const TWEEN = __webpack_require__(41);
+const PIXI = __webpack_require__(11);
+__webpack_require__(10);
+const fourFace_1 = __webpack_require__(18);
+const menuState_1 = __webpack_require__(23);
+const state_1 = __webpack_require__(24);
+class GameState extends state_1.State {
+    constructor(app) {
+        super(app);
+        this.columnsLocked = false;
+        this.columns = [];
+        this.chips = [];
+        this.gameOver = false;
+        for (let row = 0; row < fourFace_1.FourFace.rows; row++) {
+            this.chips.push([]);
+            for (let column = 0; column < fourFace_1.FourFace.cols; column++) {
+                this.chips[row].push(null);
+            }
+        }
+    }
+    createNewChip(chipTexture) {
+        const activeChip = new PIXI.Sprite(chipTexture);
+        activeChip.height = 60;
+        activeChip.width = 60;
+        activeChip.y = 30;
+        activeChip.anchor.set(0.5, 0.5);
+        activeChip.visible = true;
+        activeChip.parentGroup = this.activeGroup;
+        return activeChip;
+    }
+    placeActiveChip(row) {
+        this.columnsLocked = true;
+        this.activeChip.parentGroup = this.slotGroup;
+        this.activeChip.width = 50;
+        this.activeChip.height = 50;
+        const slotY = (1.025 * this.boardSprite.height) - (0.158333 * this.boardSprite.height * row);
+        const chips = [this.app.resources.chipBlue.texture, this.app.resources.chipRed.texture];
+        new TWEEN.Tween(this.activeChip)
+            .to({ y: slotY }, 1000)
+            .easing(TWEEN.Easing.Bounce.Out)
+            .onComplete(() => {
+            if (!this.gameOver) {
+                this.columnsLocked = false;
+                this.activeChip = this.createNewChip(chips[(chips.indexOf(this.activeChip.texture) + 1) % 2]);
+                this.moveActiveChip(this.currentColumn);
+                this.layer.addChild(this.activeChip);
+                this.switchCurrentPlayer();
+                this.app.chipLandedCallback();
+            }
+        })
+            .start();
+        this.chips[row][this.currentHandPosition] = this.activeChip;
+    }
+    finish(tie = false) {
+        this.gameOver = true;
+        const finishMessage = (tie) ? "You tied!" : (this.playerOneHighlight.visible) ?
+            this.app.playerOneName + " wins!" : this.app.playerTwoName + " wins!";
+        const textStyle = new PIXI.TextStyle({
+            align: "center", fill: 0xFFFFFF, fontFamily: "Arial",
+            fontSize: 50, fontWeight: "bold",
+            stroke: 0x000000, strokeThickness: 10,
+        });
+        const winText = new PIXI.Text(finishMessage, textStyle);
+        winText.scale.set(0.1);
+        winText.anchor.set(0.5, 0.5);
+        winText.position.set(250, 150);
+        new TWEEN.Tween(winText.scale)
+            .to({ x: 1, y: 1 }, 200)
+            .easing(TWEEN.Easing.Elastic.Out)
+            .onStart(() => {
+            this.layer.addChild(winText);
+        })
+            .onComplete(() => {
+            setTimeout(() => {
+                this.app.updateState(menuState_1.MenuState);
+            }, 4000);
+        })
+            .delay(1000)
+            .start();
+    }
+    moveActiveChip(column) {
+        this.currentHandPosition = column;
+        const columnGraphic = this.columns[column];
+        this.activeChip.visible = false;
+        this.activeChip.width = 20;
+        this.activeChip.height = 20;
+        this.activeChip.visible = true;
+        this.activeChip.x = columnGraphic.x + (columnGraphic.width / 2);
+        new TWEEN.Tween(this.activeChip)
+            .to({ width: 60, height: 60 }, 400)
+            .easing(TWEEN.Easing.Quartic.Out)
+            .start();
+    }
+    createColumns(at = 60) {
+        for (let i = 0; i < 7; i++) {
+            const column = new PIXI.Graphics();
+            column.lineStyle(0, 0x000000, 1);
+            column.beginFill(0x000000, 0);
+            column.drawRect(0, 0, 63, this.boardSprite.height);
+            column.endFill();
+            column.interactive = true;
+            column.buttonMode = true;
+            column.parentGroup = this.activeGroup;
+            column.defaultCursor = "pointer";
+            column.y = this.boardSprite.y;
+            const boardEdge = this.boardSprite.x - (this.boardSprite.width / 2);
+            column.x = boardEdge + 10 + (63 * i);
+            column.on("mouseover", () => {
+                this.currentColumn = i;
+                if (!this.columnsLocked) {
+                    this.moveActiveChip(i);
+                }
+            });
+            column.on("mouseup", () => {
+                if (!this.columnsLocked) {
+                    this.app.chipPlacedCallback(i);
+                }
+            });
+            this.layer.addChild(column);
+            this.columns.push(column);
+        }
+    }
+    switchCurrentPlayer() {
+        [this.playerOneChip.alpha, this.playerOneHighlight.visible,
+            this.playerTwoChip.alpha, this.playerTwoHighlight.visible] =
+            (this.playerOneHighlight.visible) ? [0.5, false, 1, true] :
+                [1, true, 0.5, false];
+    }
+    showWinningChips(winningPositions) {
+        for (const position of winningPositions) {
+            const [row, column] = position;
+            const chip = this.chips[row][column];
+            const fade = new TWEEN.Tween(chip)
+                .to({ alpha: [0, 1] }, 1000)
+                .easing(TWEEN.Easing.Linear.None)
+                .repeat(Infinity)
+                .start();
+        }
+    }
+    show() {
+        new TWEEN.Tween(this.app.logoSprite)
+            .to({ y: -60 }, 1000)
+            .easing(TWEEN.Easing.Back.InOut)
+            .onComplete(() => {
+            this.draw();
+        })
+            .start();
+    }
+    hide() {
+        this.layer.visible = false;
+        this.gameOver = false;
+        this.columnsLocked = false;
+        this.layer.removeChildren();
+        this.app.resetCallback();
+        new TWEEN.Tween(this.app.logoSprite)
+            .to({ y: 60 }, 1000)
+            .easing(TWEEN.Easing.Back.InOut)
+            .start();
+    }
+    draw() {
+        this.slotGroup = new PIXI.display.Group(1, false);
+        const boardGroup = new PIXI.display.Group(2, false);
+        this.activeGroup = new PIXI.display.Group(3, false);
+        this.layer.addChild(new PIXI.display.Layer(this.slotGroup), new PIXI.display.Layer(boardGroup), new PIXI.display.Layer(this.activeGroup));
+        this.boardSprite = new PIXI.Sprite(this.app.resources.board.texture);
+        this.boardSprite.parentGroup = boardGroup;
+        this.boardSprite.anchor.x = 0.5;
+        this.boardSprite.position.set(250, 50);
+        this.boardSprite.scale.set(0.5, 0.5);
+        this.activeChip = this.createNewChip(this.app.resources.chipBlue.texture);
+        this.layer.addChild(this.boardSprite, this.activeChip);
+        this.createColumns();
+        this.moveActiveChip(0);
+        const textStyle = new PIXI.TextStyle({
+            align: "center", fill: 0xFFFFFF, fontFamily: "Arial",
+            fontSize: 50, fontWeight: "bold",
+            stroke: 0x000000, strokeThickness: 5,
+        });
+        const playerOneNickname = new PIXI.Text(this.app.playerOneName, textStyle);
+        const playerTwoNickname = new PIXI.Text(this.app.playerTwoName, new PIXI.TextStyle(textStyle));
+        playerOneNickname.position.set(100, 460);
+        playerTwoNickname.position.set(playerOneNickname.x, playerOneNickname.y + playerOneNickname.height + 10);
+        const highlightText = (text) => {
+            const highlight = new PIXI.Graphics();
+            highlight.lineStyle(0, 0, 1);
+            highlight.beginFill(0x000000, 0.25);
+            highlight.drawRoundedRect(text.x, text.y, text.width, text.height, 10);
+            highlight.endFill();
+            return highlight;
+        };
+        this.playerOneHighlight = highlightText(playerOneNickname);
+        this.playerTwoHighlight = highlightText(playerTwoNickname);
+        this.playerTwoHighlight.visible = false;
+        this.playerOneChip = new PIXI.Sprite(this.app.resources.chipBlue.texture);
+        this.playerTwoChip = new PIXI.Sprite(this.app.resources.chipRed.texture);
+        this.playerOneChip.scale.set(0.6, 0.6);
+        this.playerOneChip.position.set(20, playerOneNickname.y);
+        this.playerTwoChip.scale.set(0.6, 0.6);
+        this.playerTwoChip.position.set(20, playerTwoNickname.y);
+        this.playerTwoChip.alpha = 0.5;
+        const back = this.drawButton(20, 610, 100, 50, "Quit");
+        back.on("mouseup", () => {
+            this.app.updateState(menuState_1.MenuState);
+        });
+        this.layer.addChild(this.playerOneHighlight, this.playerTwoHighlight, playerOneNickname, playerTwoNickname, this.playerOneChip, this.playerTwoChip, back);
+        this.layer.visible = true;
+    }
+}
+exports.GameState = GameState;
+
 
 /***/ }),
 /* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
+ * Tween.js - Licensed under the MIT license
+ * https://github.com/tweenjs/tween.js
+ * ----------------------------------------------
+ *
+ * See https://github.com/tweenjs/tween.js/graphs/contributors for the full list of contributors.
+ * Thank you all, you're awesome!
+ */
+
+
+var _Group = function () {
+	this._tweens = {};
+	this._tweensAddedDuringUpdate = {};
+};
+
+_Group.prototype = {
+	getAll: function () {
+
+		return Object.keys(this._tweens).map(function (tweenId) {
+			return this._tweens[tweenId];
+		}.bind(this));
+
+	},
+
+	removeAll: function () {
+
+		this._tweens = {};
+
+	},
+
+	add: function (tween) {
+
+		this._tweens[tween.getId()] = tween;
+		this._tweensAddedDuringUpdate[tween.getId()] = tween;
+
+	},
+
+	remove: function (tween) {
+
+		delete this._tweens[tween.getId()];
+		delete this._tweensAddedDuringUpdate[tween.getId()];
+
+	},
+
+	update: function (time, preserve) {
+
+		var tweenIds = Object.keys(this._tweens);
+
+		if (tweenIds.length === 0) {
+			return false;
+		}
+
+		time = time !== undefined ? time : TWEEN.now();
+
+		// Tweens are updated in "batches". If you add a new tween during an update, then the
+		// new tween will be updated in the next batch.
+		// If you remove a tween during an update, it may or may not be updated. However,
+		// if the removed tween was added during the current batch, then it will not be updated.
+		while (tweenIds.length > 0) {
+			this._tweensAddedDuringUpdate = {};
+
+			for (var i = 0; i < tweenIds.length; i++) {
+
+				var tween = this._tweens[tweenIds[i]];
+
+				if (tween && tween.update(time) === false) {
+					tween._isPlaying = false;
+
+					if (!preserve) {
+						delete this._tweens[tweenIds[i]];
+					}
+				}
+			}
+
+			tweenIds = Object.keys(this._tweensAddedDuringUpdate);
+		}
+
+		return true;
+
+	}
+};
+
+var TWEEN = new _Group();
+
+TWEEN.Group = _Group;
+TWEEN._nextId = 0;
+TWEEN.nextId = function () {
+	return TWEEN._nextId++;
+};
+
+
+// Include a performance.now polyfill.
+// In node.js, use process.hrtime.
+if (typeof (window) === 'undefined' && typeof (process) !== 'undefined') {
+	TWEEN.now = function () {
+		var time = process.hrtime();
+
+		// Convert [seconds, nanoseconds] to milliseconds.
+		return time[0] * 1000 + time[1] / 1000000;
+	};
+}
+// In a browser, use window.performance.now if it is available.
+else if (typeof (window) !== 'undefined' &&
+         window.performance !== undefined &&
+		 window.performance.now !== undefined) {
+	// This must be bound, because directly assigning this function
+	// leads to an invocation exception in Chrome.
+	TWEEN.now = window.performance.now.bind(window.performance);
+}
+// Use Date.now if it is available.
+else if (Date.now !== undefined) {
+	TWEEN.now = Date.now;
+}
+// Otherwise, use 'new Date().getTime()'.
+else {
+	TWEEN.now = function () {
+		return new Date().getTime();
+	};
+}
+
+
+TWEEN.Tween = function (object, group) {
+	this._object = object;
+	this._valuesStart = {};
+	this._valuesEnd = {};
+	this._valuesStartRepeat = {};
+	this._duration = 1000;
+	this._repeat = 0;
+	this._repeatDelayTime = undefined;
+	this._yoyo = false;
+	this._isPlaying = false;
+	this._reversed = false;
+	this._delayTime = 0;
+	this._startTime = null;
+	this._easingFunction = TWEEN.Easing.Linear.None;
+	this._interpolationFunction = TWEEN.Interpolation.Linear;
+	this._chainedTweens = [];
+	this._onStartCallback = null;
+	this._onStartCallbackFired = false;
+	this._onUpdateCallback = null;
+	this._onCompleteCallback = null;
+	this._onStopCallback = null;
+	this._group = group || TWEEN;
+	this._id = TWEEN.nextId();
+
+};
+
+TWEEN.Tween.prototype = {
+	getId: function getId() {
+		return this._id;
+	},
+
+	isPlaying: function isPlaying() {
+		return this._isPlaying;
+	},
+
+	to: function to(properties, duration) {
+
+		this._valuesEnd = properties;
+
+		if (duration !== undefined) {
+			this._duration = duration;
+		}
+
+		return this;
+
+	},
+
+	start: function start(time) {
+
+		this._group.add(this);
+
+		this._isPlaying = true;
+
+		this._onStartCallbackFired = false;
+
+		this._startTime = time !== undefined ? typeof time === 'string' ? TWEEN.now() + parseFloat(time) : time : TWEEN.now();
+		this._startTime += this._delayTime;
+
+		for (var property in this._valuesEnd) {
+
+			// Check if an Array was provided as property value
+			if (this._valuesEnd[property] instanceof Array) {
+
+				if (this._valuesEnd[property].length === 0) {
+					continue;
+				}
+
+				// Create a local copy of the Array with the start value at the front
+				this._valuesEnd[property] = [this._object[property]].concat(this._valuesEnd[property]);
+
+			}
+
+			// If `to()` specifies a property that doesn't exist in the source object,
+			// we should not set that property in the object
+			if (this._object[property] === undefined) {
+				continue;
+			}
+
+			// Save the starting value.
+			this._valuesStart[property] = this._object[property];
+
+			if ((this._valuesStart[property] instanceof Array) === false) {
+				this._valuesStart[property] *= 1.0; // Ensures we're using numbers, not strings
+			}
+
+			this._valuesStartRepeat[property] = this._valuesStart[property] || 0;
+
+		}
+
+		return this;
+
+	},
+
+	stop: function stop() {
+
+		if (!this._isPlaying) {
+			return this;
+		}
+
+		this._group.remove(this);
+		this._isPlaying = false;
+
+		if (this._onStopCallback !== null) {
+			this._onStopCallback(this._object);
+		}
+
+		this.stopChainedTweens();
+		return this;
+
+	},
+
+	end: function end() {
+
+		this.update(this._startTime + this._duration);
+		return this;
+
+	},
+
+	stopChainedTweens: function stopChainedTweens() {
+
+		for (var i = 0, numChainedTweens = this._chainedTweens.length; i < numChainedTweens; i++) {
+			this._chainedTweens[i].stop();
+		}
+
+	},
+
+	group: function group(group) {
+		this._group = group;
+		return this;
+	},
+
+	delay: function delay(amount) {
+
+		this._delayTime = amount;
+		return this;
+
+	},
+
+	repeat: function repeat(times) {
+
+		this._repeat = times;
+		return this;
+
+	},
+
+	repeatDelay: function repeatDelay(amount) {
+
+		this._repeatDelayTime = amount;
+		return this;
+
+	},
+
+	yoyo: function yoyo(yy) {
+
+		this._yoyo = yy;
+		return this;
+
+	},
+
+	easing: function easing(eas) {
+
+		this._easingFunction = eas;
+		return this;
+
+	},
+
+	interpolation: function interpolation(inter) {
+
+		this._interpolationFunction = inter;
+		return this;
+
+	},
+
+	chain: function chain() {
+
+		this._chainedTweens = arguments;
+		return this;
+
+	},
+
+	onStart: function onStart(callback) {
+
+		this._onStartCallback = callback;
+		return this;
+
+	},
+
+	onUpdate: function onUpdate(callback) {
+
+		this._onUpdateCallback = callback;
+		return this;
+
+	},
+
+	onComplete: function onComplete(callback) {
+
+		this._onCompleteCallback = callback;
+		return this;
+
+	},
+
+	onStop: function onStop(callback) {
+
+		this._onStopCallback = callback;
+		return this;
+
+	},
+
+	update: function update(time) {
+
+		var property;
+		var elapsed;
+		var value;
+
+		if (time < this._startTime) {
+			return true;
+		}
+
+		if (this._onStartCallbackFired === false) {
+
+			if (this._onStartCallback !== null) {
+				this._onStartCallback(this._object);
+			}
+
+			this._onStartCallbackFired = true;
+		}
+
+		elapsed = (time - this._startTime) / this._duration;
+		elapsed = (this._duration === 0 || elapsed > 1) ? 1 : elapsed;
+
+		value = this._easingFunction(elapsed);
+
+		for (property in this._valuesEnd) {
+
+			// Don't update properties that do not exist in the source object
+			if (this._valuesStart[property] === undefined) {
+				continue;
+			}
+
+			var start = this._valuesStart[property] || 0;
+			var end = this._valuesEnd[property];
+
+			if (end instanceof Array) {
+
+				this._object[property] = this._interpolationFunction(end, value);
+
+			} else {
+
+				// Parses relative end values with start as base (e.g.: +10, -3)
+				if (typeof (end) === 'string') {
+
+					if (end.charAt(0) === '+' || end.charAt(0) === '-') {
+						end = start + parseFloat(end);
+					} else {
+						end = parseFloat(end);
+					}
+				}
+
+				// Protect against non numeric properties.
+				if (typeof (end) === 'number') {
+					this._object[property] = start + (end - start) * value;
+				}
+
+			}
+
+		}
+
+		if (this._onUpdateCallback !== null) {
+			this._onUpdateCallback(this._object);
+		}
+
+		if (elapsed === 1) {
+
+			if (this._repeat > 0) {
+
+				if (isFinite(this._repeat)) {
+					this._repeat--;
+				}
+
+				// Reassign starting values, restart by making startTime = now
+				for (property in this._valuesStartRepeat) {
+
+					if (typeof (this._valuesEnd[property]) === 'string') {
+						this._valuesStartRepeat[property] = this._valuesStartRepeat[property] + parseFloat(this._valuesEnd[property]);
+					}
+
+					if (this._yoyo) {
+						var tmp = this._valuesStartRepeat[property];
+
+						this._valuesStartRepeat[property] = this._valuesEnd[property];
+						this._valuesEnd[property] = tmp;
+					}
+
+					this._valuesStart[property] = this._valuesStartRepeat[property];
+
+				}
+
+				if (this._yoyo) {
+					this._reversed = !this._reversed;
+				}
+
+				if (this._repeatDelayTime !== undefined) {
+					this._startTime = time + this._repeatDelayTime;
+				} else {
+					this._startTime = time + this._delayTime;
+				}
+
+				return true;
+
+			} else {
+
+				if (this._onCompleteCallback !== null) {
+
+					this._onCompleteCallback(this._object);
+				}
+
+				for (var i = 0, numChainedTweens = this._chainedTweens.length; i < numChainedTweens; i++) {
+					// Make the chained tweens start exactly at the time they should,
+					// even if the `update()` method was called way past the duration of the tween
+					this._chainedTweens[i].start(this._startTime + this._duration);
+				}
+
+				return false;
+
+			}
+
+		}
+
+		return true;
+
+	}
+};
+
+
+TWEEN.Easing = {
+
+	Linear: {
+
+		None: function (k) {
+
+			return k;
+
+		}
+
+	},
+
+	Quadratic: {
+
+		In: function (k) {
+
+			return k * k;
+
+		},
+
+		Out: function (k) {
+
+			return k * (2 - k);
+
+		},
+
+		InOut: function (k) {
+
+			if ((k *= 2) < 1) {
+				return 0.5 * k * k;
+			}
+
+			return - 0.5 * (--k * (k - 2) - 1);
+
+		}
+
+	},
+
+	Cubic: {
+
+		In: function (k) {
+
+			return k * k * k;
+
+		},
+
+		Out: function (k) {
+
+			return --k * k * k + 1;
+
+		},
+
+		InOut: function (k) {
+
+			if ((k *= 2) < 1) {
+				return 0.5 * k * k * k;
+			}
+
+			return 0.5 * ((k -= 2) * k * k + 2);
+
+		}
+
+	},
+
+	Quartic: {
+
+		In: function (k) {
+
+			return k * k * k * k;
+
+		},
+
+		Out: function (k) {
+
+			return 1 - (--k * k * k * k);
+
+		},
+
+		InOut: function (k) {
+
+			if ((k *= 2) < 1) {
+				return 0.5 * k * k * k * k;
+			}
+
+			return - 0.5 * ((k -= 2) * k * k * k - 2);
+
+		}
+
+	},
+
+	Quintic: {
+
+		In: function (k) {
+
+			return k * k * k * k * k;
+
+		},
+
+		Out: function (k) {
+
+			return --k * k * k * k * k + 1;
+
+		},
+
+		InOut: function (k) {
+
+			if ((k *= 2) < 1) {
+				return 0.5 * k * k * k * k * k;
+			}
+
+			return 0.5 * ((k -= 2) * k * k * k * k + 2);
+
+		}
+
+	},
+
+	Sinusoidal: {
+
+		In: function (k) {
+
+			return 1 - Math.cos(k * Math.PI / 2);
+
+		},
+
+		Out: function (k) {
+
+			return Math.sin(k * Math.PI / 2);
+
+		},
+
+		InOut: function (k) {
+
+			return 0.5 * (1 - Math.cos(Math.PI * k));
+
+		}
+
+	},
+
+	Exponential: {
+
+		In: function (k) {
+
+			return k === 0 ? 0 : Math.pow(1024, k - 1);
+
+		},
+
+		Out: function (k) {
+
+			return k === 1 ? 1 : 1 - Math.pow(2, - 10 * k);
+
+		},
+
+		InOut: function (k) {
+
+			if (k === 0) {
+				return 0;
+			}
+
+			if (k === 1) {
+				return 1;
+			}
+
+			if ((k *= 2) < 1) {
+				return 0.5 * Math.pow(1024, k - 1);
+			}
+
+			return 0.5 * (- Math.pow(2, - 10 * (k - 1)) + 2);
+
+		}
+
+	},
+
+	Circular: {
+
+		In: function (k) {
+
+			return 1 - Math.sqrt(1 - k * k);
+
+		},
+
+		Out: function (k) {
+
+			return Math.sqrt(1 - (--k * k));
+
+		},
+
+		InOut: function (k) {
+
+			if ((k *= 2) < 1) {
+				return - 0.5 * (Math.sqrt(1 - k * k) - 1);
+			}
+
+			return 0.5 * (Math.sqrt(1 - (k -= 2) * k) + 1);
+
+		}
+
+	},
+
+	Elastic: {
+
+		In: function (k) {
+
+			if (k === 0) {
+				return 0;
+			}
+
+			if (k === 1) {
+				return 1;
+			}
+
+			return -Math.pow(2, 10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI);
+
+		},
+
+		Out: function (k) {
+
+			if (k === 0) {
+				return 0;
+			}
+
+			if (k === 1) {
+				return 1;
+			}
+
+			return Math.pow(2, -10 * k) * Math.sin((k - 0.1) * 5 * Math.PI) + 1;
+
+		},
+
+		InOut: function (k) {
+
+			if (k === 0) {
+				return 0;
+			}
+
+			if (k === 1) {
+				return 1;
+			}
+
+			k *= 2;
+
+			if (k < 1) {
+				return -0.5 * Math.pow(2, 10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI);
+			}
+
+			return 0.5 * Math.pow(2, -10 * (k - 1)) * Math.sin((k - 1.1) * 5 * Math.PI) + 1;
+
+		}
+
+	},
+
+	Back: {
+
+		In: function (k) {
+
+			var s = 1.70158;
+
+			return k * k * ((s + 1) * k - s);
+
+		},
+
+		Out: function (k) {
+
+			var s = 1.70158;
+
+			return --k * k * ((s + 1) * k + s) + 1;
+
+		},
+
+		InOut: function (k) {
+
+			var s = 1.70158 * 1.525;
+
+			if ((k *= 2) < 1) {
+				return 0.5 * (k * k * ((s + 1) * k - s));
+			}
+
+			return 0.5 * ((k -= 2) * k * ((s + 1) * k + s) + 2);
+
+		}
+
+	},
+
+	Bounce: {
+
+		In: function (k) {
+
+			return 1 - TWEEN.Easing.Bounce.Out(1 - k);
+
+		},
+
+		Out: function (k) {
+
+			if (k < (1 / 2.75)) {
+				return 7.5625 * k * k;
+			} else if (k < (2 / 2.75)) {
+				return 7.5625 * (k -= (1.5 / 2.75)) * k + 0.75;
+			} else if (k < (2.5 / 2.75)) {
+				return 7.5625 * (k -= (2.25 / 2.75)) * k + 0.9375;
+			} else {
+				return 7.5625 * (k -= (2.625 / 2.75)) * k + 0.984375;
+			}
+
+		},
+
+		InOut: function (k) {
+
+			if (k < 0.5) {
+				return TWEEN.Easing.Bounce.In(k * 2) * 0.5;
+			}
+
+			return TWEEN.Easing.Bounce.Out(k * 2 - 1) * 0.5 + 0.5;
+
+		}
+
+	}
+
+};
+
+TWEEN.Interpolation = {
+
+	Linear: function (v, k) {
+
+		var m = v.length - 1;
+		var f = m * k;
+		var i = Math.floor(f);
+		var fn = TWEEN.Interpolation.Utils.Linear;
+
+		if (k < 0) {
+			return fn(v[0], v[1], f);
+		}
+
+		if (k > 1) {
+			return fn(v[m], v[m - 1], m - f);
+		}
+
+		return fn(v[i], v[i + 1 > m ? m : i + 1], f - i);
+
+	},
+
+	Bezier: function (v, k) {
+
+		var b = 0;
+		var n = v.length - 1;
+		var pw = Math.pow;
+		var bn = TWEEN.Interpolation.Utils.Bernstein;
+
+		for (var i = 0; i <= n; i++) {
+			b += pw(1 - k, n - i) * pw(k, i) * v[i] * bn(n, i);
+		}
+
+		return b;
+
+	},
+
+	CatmullRom: function (v, k) {
+
+		var m = v.length - 1;
+		var f = m * k;
+		var i = Math.floor(f);
+		var fn = TWEEN.Interpolation.Utils.CatmullRom;
+
+		if (v[0] === v[m]) {
+
+			if (k < 0) {
+				i = Math.floor(f = m * (1 + k));
+			}
+
+			return fn(v[(i - 1 + m) % m], v[i], v[(i + 1) % m], v[(i + 2) % m], f - i);
+
+		} else {
+
+			if (k < 0) {
+				return v[0] - (fn(v[0], v[0], v[1], v[1], -f) - v[0]);
+			}
+
+			if (k > 1) {
+				return v[m] - (fn(v[m], v[m], v[m - 1], v[m - 1], f - m) - v[m]);
+			}
+
+			return fn(v[i ? i - 1 : 0], v[i], v[m < i + 1 ? m : i + 1], v[m < i + 2 ? m : i + 2], f - i);
+
+		}
+
+	},
+
+	Utils: {
+
+		Linear: function (p0, p1, t) {
+
+			return (p1 - p0) * t + p0;
+
+		},
+
+		Bernstein: function (n, i) {
+
+			var fc = TWEEN.Interpolation.Utils.Factorial;
+
+			return fc(n) / fc(i) / fc(n - i);
+
+		},
+
+		Factorial: (function () {
+
+			var a = [1];
+
+			return function (n) {
+
+				var s = 1;
+
+				if (a[n]) {
+					return a[n];
+				}
+
+				for (var i = n; i > 1; i--) {
+					s *= i;
+				}
+
+				a[n] = s;
+				return s;
+
+			};
+
+		})(),
+
+		CatmullRom: function (p0, p1, p2, p3, t) {
+
+			var v0 = (p2 - p0) * 0.5;
+			var v1 = (p3 - p1) * 0.5;
+			var t2 = t * t;
+			var t3 = t * t2;
+
+			return (2 * p1 - 2 * p2 + v0 + v1) * t3 + (- 3 * p1 + 3 * p2 - 2 * v0 - v1) * t2 + v0 * t + p1;
+
+		}
+
+	}
+
+};
+
+// UMD (Universal Module Definition)
+(function (root) {
+
+	if (true) {
+
+		// AMD
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return TWEEN;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+	} else if (typeof module !== 'undefined' && typeof exports === 'object') {
+
+		// Node.js
+		module.exports = TWEEN;
+
+	} else if (root !== undefined) {
+
+		// Global variable
+		root.TWEEN = TWEEN;
+
+	}
+
+})(this);
+
+
+/***/ }),
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12979,7 +13279,7 @@ exports.default = ObservablePoint;
 //# sourceMappingURL=ObservablePoint.js.map
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13177,7 +13477,7 @@ exports.default = GroupD8;
 //# sourceMappingURL=GroupD8.js.map
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 // var GL_MAP = {};
@@ -13238,7 +13538,7 @@ module.exports = setVertexAttribArrays;
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 
@@ -13577,7 +13877,7 @@ module.exports = Texture;
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 
@@ -13663,12 +13963,12 @@ module.exports = compileProgram;
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 var mapType = __webpack_require__(28);
-var mapSize = __webpack_require__(47);
+var mapSize = __webpack_require__(48);
 
 /**
  * Extracts the attributes
@@ -13710,7 +14010,7 @@ module.exports = extractAttributes;
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 /**
@@ -13752,11 +14052,11 @@ module.exports = mapSize;
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var mapType = __webpack_require__(28);
-var defaultValue = __webpack_require__(49);
+var defaultValue = __webpack_require__(50);
 
 /**
  * Extracts the uniforms
@@ -13793,7 +14093,7 @@ module.exports = extractUniforms;
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 /**
@@ -13877,7 +14177,7 @@ module.exports = defaultValue;
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports) {
 
 /**
@@ -13901,7 +14201,7 @@ module.exports = setPrecision;
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports) {
 
 /**
@@ -14028,7 +14328,7 @@ module.exports = generateUniformAccessObject;
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14048,11 +14348,11 @@ var _settings = __webpack_require__(3);
 
 var _settings2 = _interopRequireDefault(_settings);
 
-var _TransformStatic = __webpack_require__(53);
+var _TransformStatic = __webpack_require__(54);
 
 var _TransformStatic2 = _interopRequireDefault(_TransformStatic);
 
-var _Transform = __webpack_require__(54);
+var _Transform = __webpack_require__(55);
 
 var _Transform2 = _interopRequireDefault(_Transform);
 
@@ -14727,7 +15027,7 @@ DisplayObject.prototype.displayObjectUpdateTransform = DisplayObject.prototype.u
 //# sourceMappingURL=DisplayObject.js.map
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14942,7 +15242,7 @@ exports.default = TransformStatic;
 //# sourceMappingURL=TransformStatic.js.map
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15128,7 +15428,7 @@ exports.default = Transform;
 //# sourceMappingURL=Transform.js.map
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15137,7 +15437,7 @@ exports.default = Transform;
 exports.__esModule = true;
 exports.default = determineCrossOrigin;
 
-var _url2 = __webpack_require__(56);
+var _url2 = __webpack_require__(57);
 
 var _url3 = _interopRequireDefault(_url2);
 
@@ -15189,13 +15489,13 @@ function determineCrossOrigin(url) {
 //# sourceMappingURL=determineCrossOrigin.js.map
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports) {
 
 module.exports = require("url");
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15215,7 +15515,7 @@ var _ticker = __webpack_require__(34);
 
 var _const = __webpack_require__(1);
 
-var _determineCrossOrigin = __webpack_require__(55);
+var _determineCrossOrigin = __webpack_require__(56);
 
 var _determineCrossOrigin2 = _interopRequireDefault(_determineCrossOrigin);
 
@@ -15542,7 +15842,7 @@ function createSource(path, type) {
 //# sourceMappingURL=VideoBaseTexture.js.map
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15550,7 +15850,7 @@ function createSource(path, type) {
 
 exports.__esModule = true;
 
-var _GroupD = __webpack_require__(42);
+var _GroupD = __webpack_require__(43);
 
 var _GroupD2 = _interopRequireDefault(_GroupD);
 
@@ -15652,7 +15952,7 @@ exports.default = TextureUvs;
 //# sourceMappingURL=TextureUvs.js.map
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16022,7 +16322,7 @@ exports.default = SystemRenderer;
 //# sourceMappingURL=SystemRenderer.js.map
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16189,7 +16489,7 @@ exports.default = BaseRenderTexture;
 //# sourceMappingURL=BaseRenderTexture.js.map
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16318,7 +16618,7 @@ exports.default = CanvasRenderTarget;
 //# sourceMappingURL=CanvasRenderTarget.js.map
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16384,7 +16684,7 @@ function canUseNewCanvasBlendModes() {
 //# sourceMappingURL=canUseNewCanvasBlendModes.js.map
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16392,7 +16692,7 @@ function canUseNewCanvasBlendModes() {
 
 exports.__esModule = true;
 
-var _Filter2 = __webpack_require__(64);
+var _Filter2 = __webpack_require__(65);
 
 var _Filter3 = _interopRequireDefault(_Filter2);
 
@@ -16400,7 +16700,7 @@ var _math = __webpack_require__(4);
 
 var _path = __webpack_require__(6);
 
-var _TextureMatrix = __webpack_require__(65);
+var _TextureMatrix = __webpack_require__(66);
 
 var _TextureMatrix2 = _interopRequireDefault(_TextureMatrix);
 
@@ -16477,7 +16777,7 @@ exports.default = SpriteMaskFilter;
 //# sourceMappingURL=SpriteMaskFilter.js.map
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16678,7 +16978,7 @@ exports.default = Filter;
 //# sourceMappingURL=Filter.js.map
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16847,7 +17147,7 @@ exports.default = TextureMatrix;
 //# sourceMappingURL=TextureMatrix.js.map
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17033,7 +17333,7 @@ exports.default = Quad;
 //# sourceMappingURL=Quad.js.map
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17840,7 +18140,7 @@ function deepCopyProperties(target, source, propertyObj) {
 //# sourceMappingURL=TextStyle.js.map
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18148,7 +18448,7 @@ TextMetrics._fonts = {};
 //# sourceMappingURL=TextMetrics.js.map
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18289,7 +18589,7 @@ exports.default = GraphicsData;
 //# sourceMappingURL=GraphicsData.js.map
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18946,7 +19246,7 @@ earcut.flatten = function (data) {
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18956,7 +19256,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _autoDetectRenderer = __webpack_require__(72);
+var _autoDetectRenderer = __webpack_require__(73);
 
 var _Container = __webpack_require__(12);
 
@@ -19174,7 +19474,7 @@ exports.default = Application;
 //# sourceMappingURL=Application.js.map
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19191,7 +19491,7 @@ var _CanvasRenderer = __webpack_require__(13);
 
 var _CanvasRenderer2 = _interopRequireDefault(_CanvasRenderer);
 
-var _WebGLRenderer = __webpack_require__(19);
+var _WebGLRenderer = __webpack_require__(20);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
@@ -19248,7 +19548,7 @@ function autoDetectRenderer(options, arg1, arg2, arg3) {
 //# sourceMappingURL=autoDetectRenderer.js.map
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19311,7 +19611,7 @@ exports.default = {
 //# sourceMappingURL=accessibleTarget.js.map
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19368,7 +19668,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19382,15 +19682,15 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _generateBlurVertSource = __webpack_require__(76);
+var _generateBlurVertSource = __webpack_require__(77);
 
 var _generateBlurVertSource2 = _interopRequireDefault(_generateBlurVertSource);
 
-var _generateBlurFragSource = __webpack_require__(77);
+var _generateBlurFragSource = __webpack_require__(78);
 
 var _generateBlurFragSource2 = _interopRequireDefault(_generateBlurFragSource);
 
-var _getMaxBlurKernelSize = __webpack_require__(78);
+var _getMaxBlurKernelSize = __webpack_require__(79);
 
 var _getMaxBlurKernelSize2 = _interopRequireDefault(_getMaxBlurKernelSize);
 
@@ -19539,7 +19839,7 @@ exports.default = BlurXFilter;
 //# sourceMappingURL=BlurXFilter.js.map
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19588,7 +19888,7 @@ function generateVertBlurSource(kernelSize, x) {
 //# sourceMappingURL=generateBlurVertSource.js.map
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19640,7 +19940,7 @@ function generateFragBlurSource(kernelSize) {
 //# sourceMappingURL=generateBlurFragSource.js.map
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19661,7 +19961,7 @@ function getMaxKernelSize(gl) {
 //# sourceMappingURL=getMaxBlurKernelSize.js.map
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19675,15 +19975,15 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _generateBlurVertSource = __webpack_require__(76);
+var _generateBlurVertSource = __webpack_require__(77);
 
 var _generateBlurVertSource2 = _interopRequireDefault(_generateBlurVertSource);
 
-var _generateBlurFragSource = __webpack_require__(77);
+var _generateBlurFragSource = __webpack_require__(78);
 
 var _generateBlurFragSource2 = _interopRequireDefault(_generateBlurFragSource);
 
-var _getMaxBlurKernelSize = __webpack_require__(78);
+var _getMaxBlurKernelSize = __webpack_require__(79);
 
 var _getMaxBlurKernelSize2 = _interopRequireDefault(_getMaxBlurKernelSize);
 
@@ -19831,7 +20131,7 @@ exports.default = BlurYFilter;
 //# sourceMappingURL=BlurYFilter.js.map
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20060,7 +20360,7 @@ exports.default = InteractionData;
 //# sourceMappingURL=InteractionData.js.map
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20150,7 +20450,7 @@ exports.default = InteractionEvent;
 //# sourceMappingURL=InteractionEvent.js.map
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20331,7 +20631,7 @@ InteractionTrackingData.FLAGS = Object.freeze({
 //# sourceMappingURL=InteractionTrackingData.js.map
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20453,7 +20753,7 @@ exports.default = {
 //# sourceMappingURL=interactiveTarget.js.map
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20532,7 +20832,7 @@ var _core = __webpack_require__(0);
 
 var _resourceLoader = __webpack_require__(16);
 
-var _extras = __webpack_require__(74);
+var _extras = __webpack_require__(75);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -20550,7 +20850,7 @@ function parse(resource, texture) {
 //# sourceMappingURL=bitmapFontParser.js.map
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20722,7 +21022,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20759,7 +21059,7 @@ module.exports = function parseURI (str, opts) {
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20973,7 +21273,7 @@ function queue(worker, concurrency) {
 //# sourceMappingURL=async.js.map
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21046,7 +21346,7 @@ function encodeBinary(input) {
 //# sourceMappingURL=b64.js.map
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21096,7 +21396,7 @@ exports.getResourcePath = getResourcePath;
 
 var _resourceLoader = __webpack_require__(16);
 
-var _url = __webpack_require__(56);
+var _url = __webpack_require__(57);
 
 var _url2 = _interopRequireDefault(_url);
 
@@ -21115,7 +21415,7 @@ function getResourcePath(resource, baseUrl) {
 //# sourceMappingURL=spritesheetParser.js.map
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21143,7 +21443,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=textureParser.js.map
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21289,7 +21589,7 @@ exports.default = Plane;
 //# sourceMappingURL=Plane.js.map
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21352,164 +21652,6 @@ exports.default = CountLimiter;
 //# sourceMappingURL=CountLimiter.js.map
 
 /***/ }),
-/* 93 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const TWEEN = __webpack_require__(24);
-const PIXI = __webpack_require__(11);
-__webpack_require__(10);
-const menuState_1 = __webpack_require__(22);
-const state_1 = __webpack_require__(23);
-class GameState extends state_1.State {
-    constructor(app) {
-        super(app);
-        this.columnsLocked = false;
-        this.columns = [];
-    }
-    createNewChip(chipTexture) {
-        const activeChip = new PIXI.Sprite(chipTexture);
-        activeChip.height = 60;
-        activeChip.width = 60;
-        activeChip.y = 30;
-        activeChip.anchor.set(0.5, 0.5);
-        activeChip.visible = true;
-        activeChip.parentGroup = this.activeGroup;
-        return activeChip;
-    }
-    placeActiveChip(row, chipId = 0) {
-        this.columnsLocked = true;
-        this.activeChip.parentGroup = this.slotGroup;
-        this.activeChip.width = 50;
-        this.activeChip.height = 50;
-        const slotY = ((this.boardSprite.height / 6) * 1.4) +
-            (((this.boardSprite.height / 6) * 0.95) * (5 - row));
-        const chips = [this.app.resources.chipBlue.texture, this.app.resources.chipRed.texture];
-        new TWEEN.Tween(this.activeChip)
-            .to({ y: slotY }, 1000)
-            .easing(TWEEN.Easing.Bounce.Out)
-            .onComplete(() => {
-            this.activeChip = this.createNewChip(chips[chipId]);
-            this.moveActiveChip(this.currentColumn);
-            this.layer.addChild(this.activeChip);
-            this.columnsLocked = false;
-            this.app.chipLandedCallback();
-        })
-            .start();
-        this.app.chips[row][this.currentHandPosition] = this.activeChip;
-    }
-    moveActiveChip(column) {
-        this.activeChip.visible = false;
-        this.activeChip.width = 20;
-        this.activeChip.height = 20;
-        this.activeChip.visible = true;
-        this.activeChip.x = column.x + (column.width / 2);
-        new TWEEN.Tween(this.activeChip)
-            .to({ width: 60, height: 60 }, 400)
-            .easing(TWEEN.Easing.Quartic.Out)
-            .start();
-    }
-    createColumns(at = 60) {
-        for (let i = 0; i < 7; i++) {
-            const column = new PIXI.Graphics();
-            column.lineStyle(0, 0x000000, 1);
-            column.beginFill(0x000000, 0);
-            column.drawRect(0, 0, 63, this.boardSprite.height);
-            column.endFill();
-            column.interactive = true;
-            column.buttonMode = true;
-            column.parentGroup = this.activeGroup;
-            column.defaultCursor = "pointer";
-            column.y = this.boardSprite.y;
-            const boardEdge = this.boardSprite.x - (this.boardSprite.width / 2);
-            column.x = boardEdge + 10 + (63 * i);
-            column.on("mouseover", () => {
-                this.currentHandPosition = i;
-                this.currentColumn = column;
-                if (!this.columnsLocked) {
-                    this.moveActiveChip(column);
-                }
-            });
-            column.on("mouseup", () => {
-                if (!this.columnsLocked) {
-                    this.app.chipPlacedCallback(i);
-                }
-            });
-            this.layer.addChild(column);
-            this.columns.push(column);
-        }
-    }
-    getColumn(column) {
-        return this.columns[column];
-    }
-    showWinningChips(winningPositions) {
-        for (const position of winningPositions) {
-            const [row, column] = position;
-            const chip = this.app.chips[row][column];
-            new TWEEN.Tween(chip)
-                .to({ alpha: 0.5 }, 500)
-                .easing(TWEEN.Easing.Quartic.Out)
-                .repeat(5)
-                .start();
-        }
-    }
-    show() {
-        this.layer.removeChildren();
-        this.slotGroup = new PIXI.display.Group(1, false);
-        const boardGroup = new PIXI.display.Group(2, false);
-        this.activeGroup = new PIXI.display.Group(3, false);
-        this.layer.addChild(new PIXI.display.Layer(this.slotGroup), new PIXI.display.Layer(boardGroup), new PIXI.display.Layer(this.activeGroup));
-        this.boardSprite = new PIXI.Sprite(this.app.resources.board.texture);
-        this.boardSprite.parentGroup = boardGroup;
-        this.boardSprite.anchor.x = 0.5;
-        this.boardSprite.y = 50;
-        this.boardSprite.x = 250;
-        this.boardSprite.scale.set(0.5, 0.5);
-        this.activeChip = this.createNewChip(this.app.resources.chipBlue.texture);
-        this.layer.addChild(this.boardSprite, this.activeChip);
-        this.createColumns();
-        this.moveActiveChip(this.getColumn(0));
-        const textStyle = new PIXI.TextStyle({
-            align: "center", fill: 0xFFFFFF, fontFamily: "Arial",
-            fontSize: 50, fontWeight: "bold",
-            stroke: 0x000000, strokeThickness: 5,
-        });
-        const playerOneNickname = new PIXI.Text(this.app.playerOneName, textStyle);
-        const playerTwoNickname = new PIXI.Text(this.app.playerTwoName, new PIXI.TextStyle(textStyle));
-        playerOneNickname.position.set(100, 460);
-        playerTwoNickname.position.set(playerOneNickname.x, playerOneNickname.y + playerOneNickname.height + 10);
-        const playerOneHighlight = new PIXI.Graphics();
-        playerOneHighlight.lineStyle(0, 0, 1);
-        playerOneHighlight.beginFill(0x000000, 0.25);
-        playerOneHighlight.drawRoundedRect(playerOneNickname.x, playerOneNickname.y, playerOneNickname.width, playerOneNickname.height, 10);
-        playerOneHighlight.endFill();
-        const redChip = new PIXI.Sprite(this.app.resources.chipBlue.texture);
-        const blueChip = new PIXI.Sprite(this.app.resources.chipRed.texture);
-        redChip.scale.set(0.6, 0.6);
-        redChip.position.set(20, playerOneNickname.y);
-        blueChip.scale.set(0.6, 0.6);
-        blueChip.position.set(20, playerTwoNickname.y);
-        const back = this.drawButton(20, 610, 100, 50, "Quit");
-        back.on("mouseup", () => {
-            this.app.updateState(menuState_1.MenuState);
-            new TWEEN.Tween(this.app.logoSprite)
-                .to({ y: ((this.app.logoSprite.y === 60) ? -60 : 60) }, 1000)
-                .easing(TWEEN.Easing.Back.InOut)
-                .start();
-        });
-        this.layer.addChild(playerOneHighlight, playerOneNickname, playerTwoNickname, redChip, blueChip, back);
-        this.layer.visible = true;
-    }
-    hide() {
-        this.layer.visible = false;
-    }
-}
-exports.GameState = GameState;
-
-
-/***/ }),
 /* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21517,34 +21659,40 @@ exports.GameState = GameState;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const findFour_1 = __webpack_require__(95);
-const fourFace_1 = __webpack_require__(97);
+const fourFace_1 = __webpack_require__(18);
 const miniMax_1 = __webpack_require__(194);
-const gameState_1 = __webpack_require__(93);
-const electron_1 = __webpack_require__(40);
+const gameState_1 = __webpack_require__(40);
 window.onload = () => {
-    const findFour = new findFour_1.FindFour(6, 7);
+    let findFour = new findFour_1.FindFour(6, 7);
     const fourFace = new fourFace_1.FourFace();
+    fourFace.resetCallback = () => {
+        findFour = new findFour_1.FindFour(findFour.board.rows, findFour.board.columns);
+    };
+    const checkWin = (gameState, row, column) => {
+        if (findFour.checkWinPosition(row, column)) {
+            gameState.finish();
+            gameState.showWinningChips(findFour.winningSlots);
+        }
+        if (findFour.board.full()) {
+            gameState.finish(true);
+        }
+    };
     fourFace.chipPlacedCallback = (column) => {
         const gameState = fourFace.getState(gameState_1.GameState);
         findFour.board.place(column);
         const row = findFour.board.last;
-        gameState.placeActiveChip(row, findFour.board.player - 1);
-        if (findFour.checkWinPosition(row, column)) {
-            electron_1.ipcRenderer.send("log", "Human won!");
-        }
+        gameState.placeActiveChip(row);
+        checkWin(gameState, row, column);
     };
     fourFace.chipLandedCallback = () => {
-        if (findFour.board.player === 2) {
+        if (findFour.board.player === 2 && fourFace.gameMode === fourFace_1.FourFace.Computer) {
             const gameState = fourFace.getState(gameState_1.GameState);
-            const [nextColumn, nextScore] = miniMax_1.MiniMax.nextMove(findFour.board, 6);
-            const columnMovie = gameState.getColumn(nextColumn);
-            gameState.moveActiveChip(columnMovie);
+            const [nextColumn, nextScore] = miniMax_1.MiniMax.nextMove(findFour.board, fourFace.difficulty);
+            gameState.moveActiveChip(nextColumn);
             findFour.board.place(nextColumn);
             const nextRow = findFour.board.last;
-            gameState.placeActiveChip(nextRow, findFour.board.player - 1);
-            if (findFour.checkWinPosition(nextRow, nextColumn)) {
-                electron_1.ipcRenderer.send("log", "Computer won!");
-            }
+            gameState.placeActiveChip(nextRow);
+            checkWin(gameState, nextRow, nextColumn);
         }
     };
     document.body.appendChild(fourFace.app.view);
@@ -21608,7 +21756,7 @@ exports.FindFour = FindFour;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const electron_1 = __webpack_require__(40);
+const electron_1 = __webpack_require__(97);
 class Board {
     constructor(rows = 6, columns = 7, player = 1, board) {
         this.rows = rows, this.columns = columns;
@@ -21669,88 +21817,9 @@ exports.Board = Board;
 
 /***/ }),
 /* 97 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const TWEEN = __webpack_require__(24);
-const PIXI = __webpack_require__(11);
-__webpack_require__(10);
-const menuState_1 = __webpack_require__(22);
-class FourFace {
-    constructor() {
-        this.chips = [];
-        this.states = {};
-        this.rows = 6;
-        this.cols = 7;
-        this.app = new PIXI.Application({
-            antialias: true, height: 670,
-            transparent: true, width: 500,
-        });
-        for (let row = 0; row < this.rows; row++) {
-            this.chips.push([]);
-            for (let column = 0; column < this.cols; column++) {
-                this.chips[row].push(null);
-            }
-        }
-        this.loader = new PIXI.loaders.Loader();
-        this.app.stage = new PIXI.display.Stage();
-        requestAnimationFrame((time) => {
-            this.animate(time);
-        });
-        this.loader.add("logo", "images/logo.png")
-            .add("board", "images/board.png")
-            .add("chipBlue", "images/chip-blue.png")
-            .add("chipRed", "images/chip-red.png")
-            .load((loader, resources) => {
-            this.assetsLoaded(loader, resources);
-        });
-    }
-    animate(time) {
-        requestAnimationFrame((frameTime) => {
-            this.animate(frameTime);
-        });
-        TWEEN.update(time);
-    }
-    updateState(state) {
-        if (this.currentState !== undefined) {
-            this.currentState.hide();
-        }
-        this.states[state.name] = (state.name in this.states)
-            ? this.states[state.name] : new state(this);
-        this.currentState = this.states[state.name];
-        this.currentState.show();
-    }
-    getState(state) {
-        return this.states[state.name];
-    }
-    assetsLoaded(loader, resources) {
-        this.resources = resources;
-        this.logoSprite = new PIXI.Sprite(resources.logo.texture);
-        this.logoSprite.position.set(this.app.renderer.width / 2, this.app.renderer.height / 2);
-        this.logoSprite.anchor.set(0.5, 0.5);
-        this.logoSprite.scale.set(0.1);
-        this.updateState(menuState_1.MenuState);
-        const menuState = this.getState(menuState_1.MenuState);
-        [menuState.multiplayer.alpha, menuState.computer.alpha] = [0, 0];
-        this.app.stage.addChild(this.logoSprite);
-        const scale = new TWEEN.Tween(this.logoSprite.scale)
-            .to({ x: 0.8, y: 0.8 }, 500)
-            .easing(TWEEN.Easing.Elastic.Out);
-        const move = new TWEEN.Tween(this.logoSprite)
-            .to({ y: 60 }, 1000).easing(TWEEN.Easing.Quadratic.InOut);
-        const showMultiplayer = new TWEEN.Tween(menuState.multiplayer)
-            .to({ alpha: 1 }, 100).easing(TWEEN.Easing.Linear.None)
-            .delay(600);
-        const showComputer = new TWEEN.Tween(menuState.computer)
-            .to({ alpha: 1 }, 100).easing(TWEEN.Easing.Linear.None)
-            .delay(200);
-        scale.chain(move, showComputer, showMultiplayer).start();
-    }
-}
-exports.FourFace = FourFace;
-
+module.exports = require("electron");
 
 /***/ }),
 /* 98 */
@@ -22684,7 +22753,7 @@ module.exports = Buffer;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var Texture = __webpack_require__(44);
+var Texture = __webpack_require__(45);
 
 /**
  * Helper class to create a webGL Framebuffer
@@ -22916,11 +22985,11 @@ module.exports = Framebuffer;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var compileProgram = __webpack_require__(45),
-	extractAttributes = __webpack_require__(46),
-	extractUniforms = __webpack_require__(48),
-	setPrecision = __webpack_require__(50),
-	generateUniformAccessObject = __webpack_require__(51);
+var compileProgram = __webpack_require__(46),
+	extractAttributes = __webpack_require__(47),
+	extractUniforms = __webpack_require__(49),
+	setPrecision = __webpack_require__(51),
+	generateUniformAccessObject = __webpack_require__(52);
 
 /**
  * Helper class to create a webGL Shader
@@ -23017,7 +23086,7 @@ module.exports = Shader;
 
 
 // state object//
-var setVertexAttribArrays = __webpack_require__( 43 );
+var setVertexAttribArrays = __webpack_require__( 44 );
 
 /**
  * Helper class to work with WebGL VertexArrayObjects (vaos)
@@ -23288,13 +23357,13 @@ VertexArrayObject.prototype.getSize = function()
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-    compileProgram: __webpack_require__(45),
-    defaultValue: __webpack_require__(49),
-    extractAttributes: __webpack_require__(46),
-    extractUniforms: __webpack_require__(48),
-    generateUniformAccessObject: __webpack_require__(51),
-    setPrecision: __webpack_require__(50),
-    mapSize: __webpack_require__(47),
+    compileProgram: __webpack_require__(46),
+    defaultValue: __webpack_require__(50),
+    extractAttributes: __webpack_require__(47),
+    extractUniforms: __webpack_require__(49),
+    generateUniformAccessObject: __webpack_require__(52),
+    setPrecision: __webpack_require__(51),
+    mapSize: __webpack_require__(48),
     mapType: __webpack_require__(28)
 };
 
@@ -24566,7 +24635,7 @@ exports.default = mapCanvasBlendModesToPixi;
 
 var _const = __webpack_require__(1);
 
-var _canUseNewCanvasBlendModes = __webpack_require__(62);
+var _canUseNewCanvasBlendModes = __webpack_require__(63);
 
 var _canUseNewCanvasBlendModes2 = _interopRequireDefault(_canUseNewCanvasBlendModes);
 
@@ -24640,11 +24709,11 @@ function mapCanvasBlendModesToPixi() {
 
 exports.__esModule = true;
 
-var _ObjectRenderer2 = __webpack_require__(18);
+var _ObjectRenderer2 = __webpack_require__(19);
 
 var _ObjectRenderer3 = _interopRequireDefault(_ObjectRenderer2);
 
-var _WebGLRenderer = __webpack_require__(19);
+var _WebGLRenderer = __webpack_require__(20);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
@@ -25200,7 +25269,7 @@ var _WebGLManager2 = __webpack_require__(14);
 
 var _WebGLManager3 = _interopRequireDefault(_WebGLManager2);
 
-var _SpriteMaskFilter = __webpack_require__(63);
+var _SpriteMaskFilter = __webpack_require__(64);
 
 var _SpriteMaskFilter2 = _interopRequireDefault(_SpriteMaskFilter);
 
@@ -25640,11 +25709,11 @@ var _WebGLManager2 = __webpack_require__(14);
 
 var _WebGLManager3 = _interopRequireDefault(_WebGLManager2);
 
-var _RenderTarget = __webpack_require__(20);
+var _RenderTarget = __webpack_require__(21);
 
 var _RenderTarget2 = _interopRequireDefault(_RenderTarget);
 
-var _Quad = __webpack_require__(66);
+var _Quad = __webpack_require__(67);
 
 var _Quad2 = _interopRequireDefault(_Quad);
 
@@ -26304,7 +26373,7 @@ var _pixiGlCore = __webpack_require__(5);
 
 var _const = __webpack_require__(1);
 
-var _RenderTarget = __webpack_require__(20);
+var _RenderTarget = __webpack_require__(21);
 
 var _RenderTarget2 = _interopRequireDefault(_RenderTarget);
 
@@ -27309,11 +27378,11 @@ var _settings = __webpack_require__(3);
 
 var _settings2 = _interopRequireDefault(_settings);
 
-var _TextStyle = __webpack_require__(67);
+var _TextStyle = __webpack_require__(68);
 
 var _TextStyle2 = _interopRequireDefault(_TextStyle);
 
-var _TextMetrics = __webpack_require__(68);
+var _TextMetrics = __webpack_require__(69);
 
 var _TextMetrics2 = _interopRequireDefault(_TextMetrics);
 
@@ -28042,7 +28111,7 @@ var _Texture = __webpack_require__(7);
 
 var _Texture2 = _interopRequireDefault(_Texture);
 
-var _GraphicsData = __webpack_require__(69);
+var _GraphicsData = __webpack_require__(70);
 
 var _GraphicsData2 = _interopRequireDefault(_GraphicsData);
 
@@ -29299,11 +29368,11 @@ var _utils = __webpack_require__(2);
 
 var _const = __webpack_require__(1);
 
-var _ObjectRenderer2 = __webpack_require__(18);
+var _ObjectRenderer2 = __webpack_require__(19);
 
 var _ObjectRenderer3 = _interopRequireDefault(_ObjectRenderer2);
 
-var _WebGLRenderer = __webpack_require__(19);
+var _WebGLRenderer = __webpack_require__(20);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
@@ -29764,13 +29833,13 @@ exports.default = PrimitiveShader;
 exports.__esModule = true;
 exports.default = buildPoly;
 
-var _buildLine = __webpack_require__(21);
+var _buildLine = __webpack_require__(22);
 
 var _buildLine2 = _interopRequireDefault(_buildLine);
 
 var _utils = __webpack_require__(2);
 
-var _earcut = __webpack_require__(70);
+var _earcut = __webpack_require__(71);
 
 var _earcut2 = _interopRequireDefault(_earcut);
 
@@ -29855,7 +29924,7 @@ function buildPoly(graphicsData, webGLData, webGLDataNativeLines) {
 exports.__esModule = true;
 exports.default = buildRectangle;
 
-var _buildLine = __webpack_require__(21);
+var _buildLine = __webpack_require__(22);
 
 var _buildLine2 = _interopRequireDefault(_buildLine);
 
@@ -29936,11 +30005,11 @@ function buildRectangle(graphicsData, webGLData, webGLDataNativeLines) {
 exports.__esModule = true;
 exports.default = buildRoundedRectangle;
 
-var _earcut = __webpack_require__(70);
+var _earcut = __webpack_require__(71);
 
 var _earcut2 = _interopRequireDefault(_earcut);
 
-var _buildLine = __webpack_require__(21);
+var _buildLine = __webpack_require__(22);
 
 var _buildLine2 = _interopRequireDefault(_buildLine);
 
@@ -30097,7 +30166,7 @@ function quadraticBezierCurve(fromX, fromY, cpX, cpY, toX, toY) {
 exports.__esModule = true;
 exports.default = buildCircle;
 
-var _buildLine = __webpack_require__(21);
+var _buildLine = __webpack_require__(22);
 
 var _buildLine2 = _interopRequireDefault(_buildLine);
 
@@ -31887,7 +31956,7 @@ function deprecation(core) {
 
 exports.__esModule = true;
 
-var _accessibleTarget = __webpack_require__(73);
+var _accessibleTarget = __webpack_require__(74);
 
 Object.defineProperty(exports, 'accessibleTarget', {
   enumerable: true,
@@ -31925,7 +31994,7 @@ var _ismobilejs = __webpack_require__(30);
 
 var _ismobilejs2 = _interopRequireDefault(_ismobilejs);
 
-var _accessibleTarget = __webpack_require__(73);
+var _accessibleTarget = __webpack_require__(74);
 
 var _accessibleTarget2 = _interopRequireDefault(_accessibleTarget);
 
@@ -33909,7 +33978,7 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _ObservablePoint = __webpack_require__(41);
+var _ObservablePoint = __webpack_require__(42);
 
 var _ObservablePoint2 = _interopRequireDefault(_ObservablePoint);
 
@@ -35023,7 +35092,7 @@ Object.defineProperty(exports, 'BlurFilter', {
   }
 });
 
-var _BlurXFilter = __webpack_require__(75);
+var _BlurXFilter = __webpack_require__(76);
 
 Object.defineProperty(exports, 'BlurXFilter', {
   enumerable: true,
@@ -35032,7 +35101,7 @@ Object.defineProperty(exports, 'BlurXFilter', {
   }
 });
 
-var _BlurYFilter = __webpack_require__(79);
+var _BlurYFilter = __webpack_require__(80);
 
 Object.defineProperty(exports, 'BlurYFilter', {
   enumerable: true,
@@ -35351,11 +35420,11 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _BlurXFilter = __webpack_require__(75);
+var _BlurXFilter = __webpack_require__(76);
 
 var _BlurXFilter2 = _interopRequireDefault(_BlurXFilter);
 
-var _BlurYFilter = __webpack_require__(79);
+var _BlurYFilter = __webpack_require__(80);
 
 var _BlurYFilter2 = _interopRequireDefault(_BlurYFilter);
 
@@ -36169,7 +36238,7 @@ exports.default = AlphaFilter;
 
 exports.__esModule = true;
 
-var _InteractionData = __webpack_require__(80);
+var _InteractionData = __webpack_require__(81);
 
 Object.defineProperty(exports, 'InteractionData', {
   enumerable: true,
@@ -36187,7 +36256,7 @@ Object.defineProperty(exports, 'InteractionManager', {
   }
 });
 
-var _interactiveTarget = __webpack_require__(83);
+var _interactiveTarget = __webpack_require__(84);
 
 Object.defineProperty(exports, 'interactiveTarget', {
   enumerable: true,
@@ -36196,7 +36265,7 @@ Object.defineProperty(exports, 'interactiveTarget', {
   }
 });
 
-var _InteractionTrackingData = __webpack_require__(82);
+var _InteractionTrackingData = __webpack_require__(83);
 
 Object.defineProperty(exports, 'InteractionTrackingData', {
   enumerable: true,
@@ -36205,7 +36274,7 @@ Object.defineProperty(exports, 'InteractionTrackingData', {
   }
 });
 
-var _InteractionEvent = __webpack_require__(81);
+var _InteractionEvent = __webpack_require__(82);
 
 Object.defineProperty(exports, 'InteractionEvent', {
   enumerable: true,
@@ -36232,15 +36301,15 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _InteractionData = __webpack_require__(80);
+var _InteractionData = __webpack_require__(81);
 
 var _InteractionData2 = _interopRequireDefault(_InteractionData);
 
-var _InteractionEvent = __webpack_require__(81);
+var _InteractionEvent = __webpack_require__(82);
 
 var _InteractionEvent2 = _interopRequireDefault(_InteractionEvent);
 
-var _InteractionTrackingData = __webpack_require__(82);
+var _InteractionTrackingData = __webpack_require__(83);
 
 var _InteractionTrackingData2 = _interopRequireDefault(_InteractionTrackingData);
 
@@ -36248,7 +36317,7 @@ var _eventemitter = __webpack_require__(8);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _interactiveTarget = __webpack_require__(83);
+var _interactiveTarget = __webpack_require__(84);
 
 var _interactiveTarget2 = _interopRequireDefault(_interactiveTarget);
 
@@ -38003,7 +38072,7 @@ core.CanvasRenderer.registerPlugin('interaction', InteractionManager);
 exports.__esModule = true;
 exports.shared = exports.Resource = exports.textureParser = exports.getResourcePath = exports.spritesheetParser = exports.parseBitmapFontData = exports.bitmapFontParser = exports.Loader = undefined;
 
-var _bitmapFontParser = __webpack_require__(84);
+var _bitmapFontParser = __webpack_require__(85);
 
 Object.defineProperty(exports, 'bitmapFontParser', {
     enumerable: true,
@@ -38018,7 +38087,7 @@ Object.defineProperty(exports, 'parseBitmapFontData', {
     }
 });
 
-var _spritesheetParser = __webpack_require__(89);
+var _spritesheetParser = __webpack_require__(90);
 
 Object.defineProperty(exports, 'spritesheetParser', {
     enumerable: true,
@@ -38033,7 +38102,7 @@ Object.defineProperty(exports, 'getResourcePath', {
     }
 });
 
-var _textureParser = __webpack_require__(90);
+var _textureParser = __webpack_require__(91);
 
 Object.defineProperty(exports, 'textureParser', {
     enumerable: true,
@@ -38051,7 +38120,7 @@ Object.defineProperty(exports, 'Resource', {
     }
 });
 
-var _Application = __webpack_require__(71);
+var _Application = __webpack_require__(72);
 
 var _Application2 = _interopRequireDefault(_Application);
 
@@ -38139,15 +38208,15 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _miniSignals = __webpack_require__(85);
+var _miniSignals = __webpack_require__(86);
 
 var _miniSignals2 = _interopRequireDefault(_miniSignals);
 
-var _parseUri = __webpack_require__(86);
+var _parseUri = __webpack_require__(87);
 
 var _parseUri2 = _interopRequireDefault(_parseUri);
 
-var _async = __webpack_require__(87);
+var _async = __webpack_require__(88);
 
 var async = _interopRequireWildcard(_async);
 
@@ -38803,15 +38872,15 @@ var _eventemitter = __webpack_require__(8);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _textureParser = __webpack_require__(90);
+var _textureParser = __webpack_require__(91);
 
 var _textureParser2 = _interopRequireDefault(_textureParser);
 
-var _spritesheetParser = __webpack_require__(89);
+var _spritesheetParser = __webpack_require__(90);
 
 var _spritesheetParser2 = _interopRequireDefault(_spritesheetParser);
 
-var _bitmapFontParser = __webpack_require__(84);
+var _bitmapFontParser = __webpack_require__(85);
 
 var _bitmapFontParser2 = _interopRequireDefault(_bitmapFontParser);
 
@@ -38977,7 +39046,7 @@ var _Resource = __webpack_require__(38);
 
 var _Resource2 = _interopRequireDefault(_Resource);
 
-var _b = __webpack_require__(88);
+var _b = __webpack_require__(89);
 
 var _b2 = _interopRequireDefault(_b);
 
@@ -39089,7 +39158,7 @@ Object.defineProperty(exports, 'CanvasMeshRenderer', {
   }
 });
 
-var _Plane = __webpack_require__(91);
+var _Plane = __webpack_require__(92);
 
 Object.defineProperty(exports, 'Plane', {
   enumerable: true,
@@ -39577,7 +39646,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Plane2 = __webpack_require__(91);
+var _Plane2 = __webpack_require__(92);
 
 var _Plane3 = _interopRequireDefault(_Plane2);
 
@@ -41431,7 +41500,7 @@ Object.defineProperty(exports, 'BasePrepare', {
   }
 });
 
-var _CountLimiter = __webpack_require__(92);
+var _CountLimiter = __webpack_require__(93);
 
 Object.defineProperty(exports, 'CountLimiter', {
   enumerable: true,
@@ -41776,8 +41845,10 @@ exports.default = TimeLimiter;
 Object.defineProperty(exports, "__esModule", { value: true });
 const PIXI = __webpack_require__(11);
 __webpack_require__(10);
-const menuState_1 = __webpack_require__(22);
-const state_1 = __webpack_require__(23);
+const fourFace_1 = __webpack_require__(18);
+const menuState_1 = __webpack_require__(23);
+const state_1 = __webpack_require__(24);
+const gameState_1 = __webpack_require__(40);
 class ComputerState extends state_1.State {
     constructor(app) {
         super(app);
@@ -41788,21 +41859,57 @@ class ComputerState extends state_1.State {
         });
         const playerText = new PIXI.Text("Enter your name: ", textStyle);
         playerText.position.set(50, 150);
-        const easy = this.drawButton(50, 330, 400, 50, "Easy");
-        const medium = this.drawButton(50, 400, 400, 50, "Medium");
-        const hard = this.drawButton(50, 470, 400, 50, "Hard");
+        this.easy = this.drawButton(50, 330, 400, 50, "Easy");
+        [this.easy.alpha, this.easy.interactive] = [0.2, false];
+        this.medium = this.drawButton(50, 400, 400, 50, "Medium");
+        [this.medium.alpha, this.medium.interactive] = [0.2, false];
+        this.hard = this.drawButton(50, 470, 400, 50, "Hard");
+        [this.hard.alpha, this.hard.interactive] = [0.2, false];
         const back = this.drawButton(50, 590, 400, 50, "Go back");
-        this.layer.addChild(playerText, easy, medium, hard, back);
+        this.layer.addChild(playerText, this.easy, this.medium, this.hard, back);
+        this.easy.on("mouseup", () => {
+            this.app.difficulty = fourFace_1.FourFace.Easy;
+            this.app.updateState(gameState_1.GameState);
+        });
+        this.medium.on("mouseup", () => {
+            this.app.difficulty = fourFace_1.FourFace.Medium;
+            this.app.updateState(gameState_1.GameState);
+        });
+        this.hard.on("mouseup", () => {
+            this.app.difficulty = fourFace_1.FourFace.Hard;
+            this.app.updateState(gameState_1.GameState);
+        });
         back.on("mouseup", () => {
             this.app.updateState(menuState_1.MenuState);
         });
     }
     show() {
         this.layer.visible = true;
+        this.app.gameMode = fourFace_1.FourFace.Computer;
+        this.app.playerTwoName = "Computer";
         const playerInput = this.createTextBox(200, 50, 350);
+        const checkName = (e) => {
+            [this.easy.alpha, this.easy.interactive, this.medium.alpha,
+                this.medium.interactive, this.hard.alpha, this.hard.interactive] =
+                [0.2, false, 0.2, false, 0.2, false];
+            const check = /[^a-zA-Z]/;
+            const checkResult = check.test(playerInput.value);
+            playerInput.style.color = (checkResult) ? "#FF0000" : "#000000";
+            if (playerInput.value) {
+                [this.easy.alpha, this.easy.interactive, this.medium.alpha,
+                    this.medium.interactive, this.hard.alpha, this.hard.interactive] =
+                    (checkResult) ? [0.2, false, 0.2, false, 0.2, false] : [1, true, 1, true, 1, true];
+                this.app.playerOneName = this.tidyDisplayName(playerInput.value);
+            }
+        };
+        playerInput.maxLength = 20;
+        playerInput.onkeyup = checkName;
     }
     hide() {
         this.layer.visible = false;
+        [this.easy.alpha, this.easy.interactive, this.medium.alpha,
+            this.medium.interactive, this.hard.alpha, this.hard.interactive] =
+            [0.2, false, 0.2, false, 0.2, false];
         this.destroyTextBox();
     }
 }
@@ -41816,12 +41923,12 @@ exports.ComputerState = ComputerState;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const TWEEN = __webpack_require__(24);
 const PIXI = __webpack_require__(11);
 __webpack_require__(10);
-const gameState_1 = __webpack_require__(93);
-const menuState_1 = __webpack_require__(22);
-const state_1 = __webpack_require__(23);
+const fourFace_1 = __webpack_require__(18);
+const gameState_1 = __webpack_require__(40);
+const menuState_1 = __webpack_require__(23);
+const state_1 = __webpack_require__(24);
 class MultiplayerState extends state_1.State {
     constructor(app) {
         super(app);
@@ -41843,35 +41950,32 @@ class MultiplayerState extends state_1.State {
             this.app.updateState(menuState_1.MenuState);
         });
         this.play.on("mouseup", () => {
-            new TWEEN.Tween(this.app.logoSprite)
-                .to({ y: ((this.app.logoSprite.y === 60) ? -60 : 60) }, 1000)
-                .easing(TWEEN.Easing.Back.InOut)
-                .onComplete(() => {
-                this.app.updateState(gameState_1.GameState);
-            })
-                .start();
+            this.app.updateState(gameState_1.GameState);
         });
     }
     show() {
         this.layer.visible = true;
-        this.playerOneInput = this.createTextBox(200, 50, 350);
-        this.playerTwoInput = this.createTextBox(350, 50, 350);
-        [this.playerOneInput.maxLength, this.playerTwoInput.maxLength] = [20, 20];
-        [this.playerOneInput.onkeyup, this.playerTwoInput.onkeyup] = [this.onNameUpdate, this.onNameUpdate];
+        this.app.gameMode = fourFace_1.FourFace.Multiplayer;
+        const playerOneInput = this.createTextBox(200, 50, 350);
+        const playerTwoInput = this.createTextBox(350, 50, 350);
+        const checkName = (e) => {
+            [this.play.alpha, this.play.interactive] = [0.2, false];
+            const check = /[^a-zA-Z]/;
+            e.target.style.color = (check.test(e.target.value)) ? "#FF0000" : "#000000";
+            if (playerOneInput.value && playerTwoInput.value) {
+                [this.play.alpha, this.play.interactive] =
+                    check.test(playerOneInput.value + playerTwoInput.value) ? [0.2, false] : [1, true];
+                [this.app.playerOneName, this.app.playerTwoName] = [this.tidyDisplayName(playerOneInput.value),
+                    this.tidyDisplayName(playerTwoInput.value)];
+            }
+        };
+        [playerOneInput.maxLength, playerTwoInput.maxLength] = [20, 20];
+        [playerOneInput.onkeyup, playerTwoInput.onkeyup] = [checkName, checkName];
     }
     hide() {
         this.layer.visible = false;
         [this.play.alpha, this.play.interactive] = [0.2, false];
         this.destroyTextBox();
-    }
-    onNameUpdate(e) {
-        const check = /[^a-zA-Z\s]/;
-        e.target.style.color = (check.test(e.target.value)) ? "#FF0000" : "#000000";
-        if (this.playerOneInput.value && this.playerTwoInput.value) {
-            [this.play.alpha, this.play.interactive] =
-                check.test(this.playerOneInput.value + this.playerTwoInput.value) ? [0.2, false] : [1, true];
-            [this.app.playerOneName, this.app.playerTwoName] = [this.playerOneInput.value, this.playerTwoInput.value];
-        }
     }
 }
 exports.MultiplayerState = MultiplayerState;

@@ -10,8 +10,6 @@ import { State } from "./state";
 export class MultiplayerState extends State {
 
     private play: pixi_display.Layer;
-    private playerOneInput: HTMLInputElement;
-    private playerTwoInput: HTMLInputElement;
 
     constructor(app: FourFace) {
         super(app);
@@ -36,37 +34,33 @@ export class MultiplayerState extends State {
         });
 
         this.play.on("mouseup", () => {
-            new TWEEN.Tween(this.app.logoSprite)
-                .to({ y: ((this.app.logoSprite.y === 60) ? -60 : 60) }, 1000)
-                .easing(TWEEN.Easing.Back.InOut)
-                .onComplete(() => {
-                    this.app.updateState(GameState);
-                })
-                .start();
+            this.app.updateState(GameState);
         });
     }
 
     public show(): void {
         this.layer.visible = true;
-        this.playerOneInput = this.createTextBox(200, 50, 350);
-        this.playerTwoInput = this.createTextBox(350, 50, 350);
-        [this.playerOneInput.maxLength, this.playerTwoInput.maxLength] = [20, 20];
-        [this.playerOneInput.onkeyup, this.playerTwoInput.onkeyup] = [this.onNameUpdate, this.onNameUpdate];
+        this.app.gameMode = FourFace.Multiplayer;
+        const playerOneInput = this.createTextBox(200, 50, 350);
+        const playerTwoInput = this.createTextBox(350, 50, 350);
+        const checkName = (e: any) => {
+            [this.play.alpha, this.play.interactive] = [0.2, false];
+            const check = /[^a-zA-Z]/;
+            e.target.style.color = (check.test(e.target.value)) ? "#FF0000" : "#000000";
+            if (playerOneInput.value && playerTwoInput.value) {
+                [this.play.alpha, this.play.interactive] =
+                    check.test(playerOneInput.value + playerTwoInput.value) ? [0.2, false] : [1, true];
+                [this.app.playerOneName, this.app.playerTwoName] = [this.tidyDisplayName(playerOneInput.value),
+                    this.tidyDisplayName(playerTwoInput.value)];
+            }
+        };
+        [playerOneInput.maxLength, playerTwoInput.maxLength] = [20, 20];
+        [playerOneInput.onkeyup, playerTwoInput.onkeyup] = [checkName, checkName];
     }
 
     public hide(): void {
         this.layer.visible = false;
         [this.play.alpha, this.play.interactive] = [0.2, false];
         this.destroyTextBox();
-    }
-
-    private onNameUpdate(e: any) {
-        const check = /[^a-zA-Z\s]/;
-        e.target.style.color = (check.test(e.target.value)) ? "#FF0000" : "#000000";
-        if (this.playerOneInput.value && this.playerTwoInput.value) {
-            [this.play.alpha, this.play.interactive] =
-                check.test(this.playerOneInput.value + this.playerTwoInput.value) ? [0.2, false] : [1, true];
-            [this.app.playerOneName, this.app.playerTwoName] = [this.playerOneInput.value, this.playerTwoInput.value];
-        }
     }
 }
