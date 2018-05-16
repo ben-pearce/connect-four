@@ -1,8 +1,13 @@
+/**
+ * fourFace.ts
+ *
+ * The main class for managing the WebGL UI.
+ */
+
 import * as TWEEN from "@tweenjs/tween.js";
 import * as PIXI from "pixi.js";
 import "pixi-layers";
 
-import { ipcRenderer } from "electron";
 import { TextStyle } from "pixi.js";
 import { FindFour } from "./findFour";
 
@@ -10,9 +15,15 @@ import { MenuState } from "./states/menuState";
 import { State } from "./states/state";
 
 export class FourFace {
+    /**
+     * Game modes
+     */
     public static Multiplayer = 0;
     public static Computer = 1;
 
+    /**
+     * Computer AI difficulty levels.
+     */
     public static Easy = 4;
     public static Medium = 6;
     public static Hard = 8;
@@ -22,8 +33,23 @@ export class FourFace {
 
     public app: PIXI.Application;
     public loader: PIXI.loaders.Loader;
+
+    /**
+     * Callback that can be assigned is invoked when column
+     * is selected.
+     */
     public chipPlacedCallback: (column: number) => void;
+
+    /**
+     * Callback that can be assigned is invoked when chip
+     * has finished landing and UI has created a new chip.
+     */
     public chipLandedCallback: () => void;
+
+    /**
+     * Callback that can be assigned is invoked when quit
+     * button is pressed on the game state.
+     */
     public resetCallback: () => void;
 
     public gameMode: number = FourFace.Multiplayer;
@@ -38,6 +64,13 @@ export class FourFace {
     private states: { [id: string]: State } = {};
     private currentState: State;
 
+    /**
+     * FourFace class constructor.
+     *
+     * Creates new PIXI Application instance and loads
+     * assets into the stage. Starts the tween.js event
+     * loop.
+     */
     public constructor() {
         this.app = new PIXI.Application({
             antialias: true, height: 670,
@@ -60,6 +93,9 @@ export class FourFace {
             });
     }
 
+    /**
+     * tween.js event loop
+     */
     public animate(time: number) {
         requestAnimationFrame((frameTime: number) => {
             this.animate(frameTime);
@@ -67,6 +103,13 @@ export class FourFace {
         TWEEN.update(time);
     }
 
+    /**
+     * Creates a new state based on class reference passed in. If
+     * state already exists then just show the existing state. Always
+     * hide the current state.
+     *
+     * @param  {new(app:FourFace} state The state to move to.
+     */
     public updateState(state: new(app: FourFace) => State) {
         if (this.currentState !== undefined) {
             this.currentState.hide();
@@ -77,10 +120,23 @@ export class FourFace {
         this.currentState.show();
     }
 
+    /**
+     * Returns an existing state based on class reference passed in.
+     *
+     * @param  {new(app:FourFace} state The state to retrieve
+     * @returns any The retieved state.
+     */
     public getState(state: new(app: FourFace) => State): any {
         return this.states[state.name];
     }
 
+    /**
+     * Callback for PIXI loader. Invoked once all resources have been
+     * loaded. Animates fly-in logo and displays main menu.
+     *
+     * @param  {PIXI.loaders.Loader} loader
+     * @param  {PIXI.loaders.ResourceDictionary} resources
+     */
     public assetsLoaded(loader: PIXI.loaders.Loader, resources: PIXI.loaders.ResourceDictionary) {
         this.resources = resources;
 

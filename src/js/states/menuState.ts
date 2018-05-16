@@ -1,3 +1,10 @@
+/**
+ * menuState.ts
+ *
+ * Responsible for drawing main menu to stage and
+ * handling related input.
+ */
+
 import * as TWEEN from "@tweenjs/tween.js";
 import * as PIXI from "pixi.js";
 import "pixi-layers";
@@ -12,6 +19,11 @@ export class MenuState extends State {
     public multiplayer: pixi_display.Layer;
     public computer: pixi_display.Layer;
 
+    /**
+     * Draws main menu.
+     *
+     * @param  {FourFace} app
+     */
     constructor(app: FourFace) {
         super(app);
 

@@ -1,3 +1,9 @@
+/**
+ * index.ts
+ *
+ * Entry point for process application (Electron).
+ */
+
 import { app, BrowserWindow, ipcMain } from "electron";
 import * as path from "path";
 import * as url from "url";
@@ -11,15 +17,15 @@ function createWindow() {
         width: 500,
     });
 
+    // Do not show menu bar on windows.
     win.setMenu(null);
 
+    // Navigate to internal index page.
     win.loadURL(url.format({
         pathname: path.join(__dirname, "../dist/index.html"),
         protocol: "file:",
         slashes: true,
     }));
-
-    // win.webContents.openDevTools();
 
     win.on("closed", () => {
         win = null;
@@ -39,11 +45,3 @@ app.on("activate", () => {
         createWindow();
     }
 });
-
-ipcMain.on("log", (event: object, arg: string) => {
-    log()(arg);
-});
-
-function log() {
-    return console.log;
-}

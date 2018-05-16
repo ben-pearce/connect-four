@@ -1,3 +1,10 @@
+/**
+ * gameState.ts
+ *
+ * Responsible for drawing game to stage and handling
+ * related input.
+ */
+
 import * as TWEEN from "@tweenjs/tween.js";
 import * as PIXI from "pixi.js";
 import "pixi-layers";
@@ -5,7 +12,6 @@ import "pixi-layers";
 import { FourFace } from "../fourFace";
 import { MenuState } from "./menuState";
 import { State } from "./state";
-import { ipcRenderer } from "electron";
 
 export class GameState extends State {
 
@@ -26,6 +32,12 @@ export class GameState extends State {
 
     private gameOver: boolean = false;
 
+    /**
+     * GameState constructor. Creates 2D null array to
+     * store chips which will be placed into the board.
+     *
+     * @param  {FourFace} app
+     */
     constructor(app: FourFace) {
         super(app);
 
@@ -37,6 +49,14 @@ export class GameState extends State {
         }
     }
 
+    /**
+     * Creates a new chip sprite with specified texture and adjusts
+     * to the correct position and scaling. Also moves the sprite to
+     * the active layer so it appears above the board.
+     *
+     * @param  {PIXI.Texture} chipTexture   Texture to use
+     * @returns PIXI                        The generated sprite
+     */
     public createNewChip(chipTexture: PIXI.Texture): PIXI.Sprite  {
         const activeChip: PIXI.Sprite = new PIXI.Sprite(chipTexture);
         activeChip.height = 60;
@@ -48,13 +68,21 @@ export class GameState extends State {
         return activeChip;
     }
 
+    /**
+     * Animates the placing of the active chip and
+     * drops to the row specified.
+     *
+     * @param  {number} row The row to drop chip to
+     */
     public placeActiveChip(row: number) {
         this.columnsLocked = true;
         this.activeChip.parentGroup = this.slotGroup;
         this.activeChip.width = 50;
         this.activeChip.height = 50;
-        const slotY: number = (1.025 * this.boardSprite.height) - (0.158333 * this.boardSprite.height * row);
-        const chips: PIXI.Texture[] = [this.app.resources.chipBlue.texture, this.app.resources.chipRed.texture];
+        const slotY: number = (1.025 * this.boardSprite.height) -
+            (0.158333 * this.boardSprite.height * row);
+        const chips: PIXI.Texture[] = [this.app.resources.chipBlue.texture,
+            this.app.resources.chipRed.texture];
 
         new TWEEN.Tween(this.activeChip)
             .to({ y: slotY }, 1000)
@@ -62,7 +90,8 @@ export class GameState extends State {
             .onComplete(() => {
                 if (!this.gameOver) {
                     this.columnsLocked = false;
-                    this.activeChip = this.createNewChip(chips[(chips.indexOf(this.activeChip.texture) + 1) % 2]);
+                    this.activeChip = this.createNewChip(chips[(chips.indexOf(
+                            this.activeChip.texture) + 1) % 2]);
                     this.moveActiveChip(this.currentColumn);
                     this.layer.addChild(this.activeChip);
                     this.switchCurrentPlayer();
@@ -74,10 +103,17 @@ export class GameState extends State {
         this.chips[row][this.currentHandPosition] = this.activeChip;
     }
 
+    /**
+     * Draws and animates the end game text once a game is over,
+     * then returns to the main menu after a delay.
+     *
+     * @param  {boolean=false} tie  Is match a tie?
+     */
     public finish(tie: boolean = false) {
         this.gameOver = true;
-        const finishMessage = (tie) ? "You tied!" : (this.playerOneHighlight.visible) ?
-            this.app.playerOneName + " wins!" : this.app.playerTwoName + " wins!";
+        const finishMessage = (tie) ? "You tied!" :
+            (this.playerOneHighlight.visible) ? this.app.playerOneName +
+            " wins!" : this.app.playerTwoName + " wins!";
         const textStyle: PIXI.TextStyle = new PIXI.TextStyle({
             align: "center", fill: 0xFFFFFF, fontFamily: "Arial",
             fontSize: 50, fontWeight: "bold",
@@ -103,6 +139,11 @@ export class GameState extends State {
             .start();
     }
 
+    /**
+     * Moves the active chip to a column.
+     *
+     * @param  {number} column  The column to move to
+     */
     public moveActiveChip(column: number) {
         this.currentHandPosition = column;
         const columnGraphic = this.columns[column];
@@ -118,7 +159,12 @@ export class GameState extends State {
             .start();
     }
 
-    public createColumns(at: number = 60) {
+    /**
+     * Draws and displays invisible column over the board
+     * sprite so each column can be treated as an interactive
+     * button.
+     */
+    public createColumns() {
         for (let i: number = 0; i < 7; i++) {
             const column: PIXI.Graphics = new PIXI.Graphics();
 
@@ -154,6 +200,11 @@ export class GameState extends State {
         }
     }
 
+    /**
+     * Method hides the current players highlight and adjusts
+     * chip alpha, then shows the new player highlight and adjusts
+     * their chip alpha. Switching the current player display.
+     */
     public switchCurrentPlayer() {
         [this.playerOneChip.alpha, this.playerOneHighlight.visible,
             this.playerTwoChip.alpha, this.playerTwoHighlight.visible] =
@@ -161,6 +212,12 @@ export class GameState extends State {
             [1, true, 0.5, false];
     }
 
+    /**
+     * Tweens all of the chips passed in winning positions
+     * to fade-flash repeatedly.
+     *
+     * @param  {Array<[number, number]>} winningPositions Array of positions
+     */
     public showWinningChips(winningPositions: Array<[number, number]>) {
         for (const position of winningPositions) {
             const [row, column] = position;
@@ -173,6 +230,11 @@ export class GameState extends State {
         }
     }
 
+    /**
+     * Bounce out the logo.
+     *
+     * @returns void
+     */
     public show(): void {
         new TWEEN.Tween(this.app.logoSprite)
             .to({ y: -60 }, 1000)
@@ -183,6 +245,13 @@ export class GameState extends State {
             .start();
     }
 
+    /**
+     * Resets state and destroys all child sprites
+     * and graphics as they will need to be redrawn for
+     * the next game. Bounce in the logo.
+     *
+     * @returns void
+     */
     public hide(): void {
         this.layer.visible = false;
         this.gameOver = false;
@@ -195,6 +264,13 @@ export class GameState extends State {
             .start();
     }
 
+    /**
+     * Draws the board initially on first game or redraws
+     * the board after being destroyed following the previous
+     * game.
+     *
+     * @returns void
+     */
     private draw(): void {
         this.slotGroup = new PIXI.display.Group(1, false);
         const boardGroup = new PIXI.display.Group(2, false);
@@ -222,10 +298,13 @@ export class GameState extends State {
             stroke: 0x000000, strokeThickness: 5,
         });
 
-        const playerOneNickname: PIXI.Text = new PIXI.Text(this.app.playerOneName, textStyle);
-        const playerTwoNickname: PIXI.Text = new PIXI.Text(this.app.playerTwoName, new PIXI.TextStyle(textStyle));
+        const playerOneNickname: PIXI.Text = new PIXI.Text(
+                this.app.playerOneName, textStyle);
+        const playerTwoNickname: PIXI.Text = new PIXI.Text(
+                this.app.playerTwoName, new PIXI.TextStyle(textStyle));
         playerOneNickname.position.set(100, 460);
-        playerTwoNickname.position.set(playerOneNickname.x, playerOneNickname.y + playerOneNickname.height + 10);
+        playerTwoNickname.position.set(playerOneNickname.x, playerOneNickname.y
+            + playerOneNickname.height + 10);
 
         const highlightText = (text: PIXI.Text): PIXI.Graphics => {
             const highlight: PIXI.Graphics = new PIXI.Graphics();
@@ -253,8 +332,8 @@ export class GameState extends State {
             this.app.updateState(MenuState);
         });
         this.layer.addChild(this.playerOneHighlight, this.playerTwoHighlight,
-            playerOneNickname, playerTwoNickname, this.playerOneChip, this.playerTwoChip,
-            back);
+            playerOneNickname, playerTwoNickname, this.playerOneChip,
+            this.playerTwoChip, back);
         this.layer.visible = true;
     }
 }

@@ -1,3 +1,10 @@
+/**
+ * computerState.ts
+ *
+ * Responsible for drawing computer menu to the stage
+ * and handling related input.
+ */
+
 import * as TWEEN from "@tweenjs/tween.js";
 import * as PIXI from "pixi.js";
 import "pixi-layers";
@@ -13,6 +20,11 @@ export class ComputerState extends State {
     private medium: pixi_display.Layer;
     private hard: pixi_display.Layer;
 
+    /**
+     * Draws computer menu.
+     *
+     * @param  {FourFace} app
+     */
     constructor(app: FourFace) {
         super(app);
 
@@ -53,6 +65,12 @@ export class ComputerState extends State {
         });
     }
 
+    /**
+     * Name input box is created and validated similar to that of
+     * the multiplayer state.
+     *
+     * @returns void
+     */
     public show(): void {
         this.layer.visible = true;
         this.app.gameMode = FourFace.Computer;
@@ -69,7 +87,8 @@ export class ComputerState extends State {
             if (playerInput.value) {
                 [this.easy.alpha, this.easy.interactive, this.medium.alpha,
                     this.medium.interactive, this.hard.alpha, this.hard.interactive] =
-                    (checkResult) ? [0.2, false, 0.2, false, 0.2, false] : [1, true, 1, true, 1, true];
+                    (checkResult) ? [0.2, false, 0.2, false, 0.2, false] :
+                        [1, true, 1, true, 1, true];
                 this.app.playerOneName = this.tidyDisplayName(playerInput.value);
             }
         };
@@ -77,6 +96,12 @@ export class ComputerState extends State {
         playerInput.onkeyup = checkName;
     }
 
+    /**
+     * Disables all three buttons on display and destroys
+     * input boxes.
+     *
+     * @returns void
+     */
     public hide(): void {
         this.layer.visible = false;
         [this.easy.alpha, this.easy.interactive, this.medium.alpha,
